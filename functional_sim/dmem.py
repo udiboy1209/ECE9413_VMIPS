@@ -19,10 +19,20 @@ class DMEM(object):
         self.data.extend([0x0 for i in range(self.size - len(self.data))])
 
     def Read(self, idx):  # Use this to read from DMEM.
-        pass  # Replace this line with your code here.
+        if idx < self.size:
+            return self.data[idx]
+        else:
+            raise IndexError(
+                f"{self.name} - ERROR: Invalid memory access at index: {idx}, with memory size: {self.size}"
+            )
 
     def Write(self, idx, val):  # Use this to write into DMEM.
-        pass  # Replace this line with your code here.
+        if idx < self.size:
+            self.data[idx] = val
+        else:
+            raise IndexError(
+                f"{self.name} - ERROR: Invalid memory access at index: {idx}, with memory size: {self.size}"
+            )
 
     def dump(self):
         with open(self.opfilepath, "w") as opf:
