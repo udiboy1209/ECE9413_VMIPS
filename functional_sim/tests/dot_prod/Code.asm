@@ -1,14 +1,14 @@
-//SR0 contains scalar value "0",
-//VR0 contains vector value "0",
-//SR2 contains (length of vector)%MVL = 2,
-//SR3 contains length of vector = 450,
-//SR4 contains start address for A,
-//SR5 contains start address for B,
-//SR6 contains the address to final result = 2048,
-//SR7 contains scalar value "1"
-
 CVM                 //clear mask
 POP SR1             //SR1 contains MVL = 64
+
+//SR0 and VR0 are 0 on reset
+LS SR2, SR0, 0      //SR2 contains (length of vector)%MVL = 2
+LS SR3, SR0, 1      //SR3 contains length of vector = 450
+LS SR4, SR0, 2      //SR4 contains start address for A = 0
+LS SR5, SR0, 3      //SR5 contains start address for B = 450
+LS SR6, SR0, 4      //SR6 contains the address to final result = 2048
+LS SR7, SR0, 5      //SR7 contains scalar value "1"
+
 MTCL SR2            //change vector length to mod value
 LV VR1, SR4         //load starting elements of A
 LV VR2, SR5         //load starting elements of B
