@@ -124,6 +124,40 @@ class Core:
                 raise NotImplementedError(f"Opcode not supported in exec_arith_vv: {ins.opcode}")
         self.VRF.Write(ins.dst(), res, mask=self.VM, length=self.VL)
 
+    def get_mem_addresses(self, ins):
+        start_addr = self.SRF.Read(ins.src(0)).unsigned()
+        if ins.opcode[2:] == "WS":
+            # Stride SR
+            stride = self.SRF.Read(ins.src(1)).unsigned()
+            addrs = list(range(start_addr, start_addr + Core.MVL*stride, stride))
+        if ins.opcode[2:] == "I":
+            # Strides taken from VR
+            strides = self.VRF.Read(ins.src(1)).unsigned()
+            addrs = [start_addr + s.unsigned for s in strides]
+        else:
+            # Stride 1
+            addrs = list(range(start_addr, start_addr + Core.MVL))
+        return addrs
+
+    @executor("LV", "LVWS", "LVI")
+    def exec_load_vector(self, ins):
+        addrs = self.get_mem_addresses(ins)
+        res = [None] * Core.MVL
+        for i in range(self.VL):
+            # Check vector mask
+            if self.VM[i]:
+                res[i] = self.VDMEM.Read(addrs[i])
+        self.VRF.Write(ins.dst(), res, mask=self.VM, length=self.VL)
+
+    @executor("SV", "SVWS", "SVI")
+    def exec_store_vector(self, ins):
+        addrs = self.get_mem_addresses(ins)
+        res = self.VRF.Read(ins.dst())
+        for i in range(self.VL):
+            # Check vector mask
+            if self.VM[i]:
+                self.VDMEM.Write(addrs[i], res[i])
+
     @executor("BEQ", "BNE", "BGT", "BLT", "BGE", "BLE")
     def exec_branch(self, ins):
         a = self.SRF.Read(ins.op(0))

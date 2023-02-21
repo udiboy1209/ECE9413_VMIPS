@@ -61,12 +61,13 @@ class RegisterFile(object):
             return self.registers[reg.idx]
 
     def Write(self, reg, val, mask=None, length=None):
-        print(f"    WRITE Reg[{reg}] = {val}")
         assert reg.ty == self.ty
         if length is None:
             length = self.vec_length
         if mask is None:
             mask = [1]*length
+        print(f"    WRITE Reg[{reg}] mask={mask} length={length}")
+        print(f"        {val}")
 
         if self.vec_length == 1:
             self.registers[reg.idx][0] = val
