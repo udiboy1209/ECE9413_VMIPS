@@ -44,28 +44,37 @@ class RegisterFile(object):
         self.reg_bits = size
         self.min_value = -pow(2, self.reg_bits - 1)
         self.max_value = pow(2, self.reg_bits - 1) - 1
-        zerobits = "0" * self.reg_bits
         # Register file as list of lists
         self.registers = [
-            [BitVec(zerobits) for e in range(self.vec_length)]
+            [BitVec(0, size) for e in range(self.vec_length)]
             for r in range(self.reg_count)
         ]
 
     def Read(self, reg):
+        print(f"    READ Reg[{reg}]")
         assert reg.ty == self.ty
         # Reg names are 1-indexed
         if self.vec_length == 1:
             # Read scalar directly, don't pass list of 1 element
-            return self.registers[reg.idx - 1][0]
+            return self.registers[reg.idx][0]
         else:
-            return self.registers[reg.idx - 1]
+            return self.registers[reg.idx]
 
-    def Write(self, reg, val):
+    def Write(self, reg, val, mask=None, length=None):
+        print(f"    WRITE Reg[{reg}] = {val}")
         assert reg.ty == self.ty
+        if length is None:
+            length = self.vec_length
+        if mask is None:
+            mask = [1]*length
+
         if self.vec_length == 1:
             self.registers[reg.idx][0] = val
         else:
-            self.registers[reg.idx] = val
+            # Update with mask
+            for i in range(length):
+                if mask[i]:
+                    self.registers[reg.idx][i] = val[i]
 
     def dump(self, iodir):
         opfilepath = os.path.abspath(os.path.join(iodir, self.name + ".txt"))
@@ -76,7 +85,7 @@ class RegisterFile(object):
                 "-" * (self.vec_length * 13) + "\n",
             ]
             lines += [
-                row_format.format(*[str(val.toSigned()) for val in data])
+                row_format.format(*[str(val) for val in data])
                 for data in self.registers
             ]
             opf.writelines(lines)

@@ -1,1 +1,7 @@
 __pycache__
+
+# Simulation outputs
+SDMEMOP.txt
+VDMEMOP.txt
+SRF.txt
+VRF.txt

@@ -1,5 +1,6 @@
 import os
 
+from util import BitVec
 
 class DMEM(object):
     # Word addressible - each address contains 32 bits.
@@ -13,10 +14,10 @@ class DMEM(object):
         self.data = []
 
         with open(self.ipfilepath, "r") as ipf:
-            self.data = [int(line.strip()) for line in ipf.readlines()]
+            self.data = [BitVec(int(line.strip())) for line in ipf.readlines()]
         print(self.name, "- Data loaded from file:", self.ipfilepath)
         # print(self.name, "- Data:", self.data)
-        self.data.extend([0x0 for i in range(self.size - len(self.data))])
+        self.data.extend([BitVec(0x0) for i in range(self.size - len(self.data))])
 
     def Read(self, idx):  # Use this to read from DMEM.
         if idx < self.size:
