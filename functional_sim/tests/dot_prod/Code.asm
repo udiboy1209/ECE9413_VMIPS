@@ -36,6 +36,6 @@ LV VR3, SR6
 ADD SR8, SR6, SR3
 LV VR4, SR8         #splitting vectors into half
 ADDVV VR3, VR3, VR4 #adding each half together
-BGT SR3, SR0, -7 #stay in loop till vector length is 1
+BGT SR3, SR0, -7    #stay in loop till vector length is 1
 ###
 SV VR3 SR6          #store final result to location 2048
