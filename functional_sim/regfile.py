@@ -1,5 +1,5 @@
 import os
-from util import BitVec
+from bitvec import BitVec
 
 
 class Reg(object):
@@ -28,6 +28,7 @@ class Reg(object):
 
     @staticmethod
     def parse(s):
+        # Parse string and determine register type and index
         try:
             return Reg(s[:2], int(s[2:]))
         except Exception as e:
@@ -51,9 +52,8 @@ class RegisterFile(object):
         ]
 
     def Read(self, reg):
-        print(f"    READ Reg[{reg}]")
+        # print(f"    READ Reg[{reg}]: {self.registers[reg.idx]}")
         assert reg.ty == self.ty
-        # Reg names are 1-indexed
         if self.vec_length == 1:
             # Read scalar directly, don't pass list of 1 element
             return self.registers[reg.idx][0]
@@ -61,13 +61,14 @@ class RegisterFile(object):
             return self.registers[reg.idx]
 
     def Write(self, reg, val, mask=None, length=None):
+        # VL and VM taken to perform partial writes to register
         assert reg.ty == self.ty
         if length is None:
             length = self.vec_length
         if mask is None:
             mask = [1]*length
-        print(f"    WRITE Reg[{reg}] mask={mask} length={length}")
-        print(f"        {val}")
+        # print(f"    WRITE Reg[{reg}] mask={mask} length={length}")
+        # print(f"        {val}")
 
         if self.vec_length == 1:
             self.registers[reg.idx][0] = val

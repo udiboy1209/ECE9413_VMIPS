@@ -1,6 +1,6 @@
 import os
 
-from util import BitVec
+from bitvec import BitVec
 
 class DMEM(object):
     # Word addressible - each address contains 32 bits.

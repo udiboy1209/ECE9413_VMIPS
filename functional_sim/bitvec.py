@@ -1,7 +1,3 @@
-# Author: Meet Udeshi, mdu2004
-#
-# Description: Implements BitVec class to manange operations on Bit vectors
-
 # BitVector stored as integer
 class BitVec:
     def __init__(self, val, length=32):
@@ -56,7 +52,12 @@ class BitVec:
 
     @staticmethod
     def div(lhs, rhs):
-        val = lhs.signed() // rhs.signed()
+        try:
+            val = lhs.signed() // rhs.signed()
+        except ZeroDivisionError:
+            # Divide by zero saturates to max
+            print("WARNING: Divide by zero detected")
+            val = lhs.mask // 2
         return BitVec(val, lhs.length)
 
     @staticmethod
@@ -90,7 +91,3 @@ class BitVec:
         val = lhs.signed() >> (rhs.unsigned() % lhs.length)
         return BitVec(val, lhs.length)
 
-
-# Constants
-ZERO32 = BitVec(0, 32)
-ONE32 = BitVec(1, 32)
