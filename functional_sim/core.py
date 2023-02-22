@@ -216,6 +216,56 @@ class Core:
         addr = self.SRF.Read(ins.src(0)).unsigned() + ins.imm()
         val = self.SRF.Read(ins.dst())
         self.SDMEM.Write(addr, val)
+        
+    @executor("SEQVV", "SNEVV", "SGTVV", "SLTVV", "SGEVV", "SLEVV")
+    def exec_svv(self, ins):
+        veca = self.VRF.Read(ins.src(0))
+        vecb = self.VRF.Read(ins.src(1))
+        if ins.opcode == "SEQVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() == vecb[i].signed()
+        elif ins.opcode == "SNEVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() != vecb[i].signed()
+        elif ins.opcode == "SGTVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() > vecb[i].signed()
+        elif ins.opcode == "SLTVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() < vecb[i].signed()
+        elif ins.opcode == "SGEVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() >= vecb[i].signed()
+        elif ins.opcode == "SLEVV":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() <= vecb[i].signed()
+        else:
+            raise NotImplementedError(f"Opcode not supported in exec_svv: {ins.opcode}")
+
+    @executor("SEQVS", "SNEVS", "SGTVS", "SLTVS", "SGEVS", "SLEVS")
+    def exec_svs(self, ins):
+        veca = self.VRF.Read(ins.src(0))
+        b = self.SRF.Read(ins.src(1))
+        if ins.opcode == "SEQVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() == b.signed()
+        elif ins.opcode == "SNEVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() != b.signed()
+        elif ins.opcode == "SGTVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() > b.signed()
+        elif ins.opcode == "SLTVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() < b.signed()
+        elif ins.opcode == "SGEVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() >= b.signed()
+        elif ins.opcode == "SLEVS":
+            for i in range(Core.MVL):
+                self.VM[i] = veca[i].signed() <= b.signed()
+        else:
+            raise NotImplementedError(f"Opcode not supported in exec_svs: {ins.opcode}")        
 
     def dumpregs(self, iodir):
         self.SRF.dump(iodir)
