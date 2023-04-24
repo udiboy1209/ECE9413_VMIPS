@@ -1,3 +1,5 @@
+import os
+
 from regfile import RegisterFile, Reg
 from bitvec import BitVec
 
@@ -25,7 +27,7 @@ class executor:
 class Core:
     MVL = 64  # Max vector length
 
-    def __init__(self, imem, sdmem, vdmem):
+    def __init__(self, imem, sdmem, vdmem, trace=False):
         self.IMEM = imem
         self.SDMEM = sdmem
         self.VDMEM = vdmem
@@ -43,6 +45,12 @@ class Core:
         self.branch_taken = False
         self.branch_PC = 0
 
+        # Dynamic instruction trace
+        if trace:
+            self.trace = []
+        else:
+            self.trace = None
+
     def run(self):
         count = 0 # Dynamic instruction count
         while not self.halted:
@@ -51,6 +59,8 @@ class Core:
 
             # Read instruction from memory
             ins = self.IMEM.Read(self.PC)
+            if self.trace is not None:
+                self.trace.append([ins, None])
             # print(f"INS {count:>5}: {self.PC:<8} {ins}")
             # Lookup executor based on opcode
             ex = executor.get(ins.opcode)
@@ -62,7 +72,13 @@ class Core:
                 self.PC = self.branch_PC
             else:
                 self.PC = self.PC + 1
+
             count += 1 # Increment dynamic count
+
+    # Append runtime value to trace
+    def trace_value(self, value):
+        if self.trace is not None:
+            self.trace[-1][1] = value
 
     @executor("ADD", "SUB", "AND", "OR", "XOR", "SLL", "SRL", "SRA")
     def exec_arithmetic_scalar(self, ins):
@@ -110,6 +126,7 @@ class Core:
                 res[i] = BitVec.div(veca[i], vecb[i])
             else:
                 raise NotImplementedError(f"Opcode not supported in exec_arith_vv: {ins.opcode}")
+        self.trace_value(self.VL)
         self.VRF.Write(ins.dst(), res, self.VM, self.VL)
 
     @executor("ADDVS", "SUBVS", "MULVS", "DIVVS")
@@ -133,6 +150,7 @@ class Core:
                 res[i] = BitVec.div(veca[i], b)
             else:
                 raise NotImplementedError(f"Opcode not supported in exec_arith_vv: {ins.opcode}")
+        self.trace_value(self.VL)
         self.VRF.Write(ins.dst(), res, mask=self.VM, length=self.VL)
 
     def get_mem_addresses(self, ins):
@@ -166,6 +184,7 @@ class Core:
             if self.VM[i]:
                 res[i] = self.VDMEM.Read(addrs[i])
         self.VRF.Write(ins.dst(), res, mask=self.VM, length=self.VL)
+        self.trace_value(addrs[:self.VL])
 
     @executor("SV", "SVWS", "SVI")
     def exec_store_vector(self, ins):
@@ -176,6 +195,7 @@ class Core:
             # Check vector mask
             if self.VM[i]:
                 self.VDMEM.Write(addrs[i], res[i])
+        self.trace_value(addrs[:self.VL])
 
     @executor("BEQ", "BNE", "BGT", "BLT", "BGE", "BLE")
     def exec_branch(self, ins):
@@ -202,6 +222,7 @@ class Core:
         # PC to branch target
         self.branch_taken = taken
         self.branch_PC = self.PC + offset
+        self.trace_value(self.branch_PC if taken else (self.PC + 1))
 
     @executor("CVM")
     def exec_cvm(self, ins):
@@ -238,6 +259,7 @@ class Core:
         addr = self.SRF.Read(ins.src(0)).unsigned() + ins.imm()
         val = self.SDMEM.Read(addr)
         self.SRF.Write(ins.dst(), val)
+        self.trace_value(addr)
 
     @executor("SS")
     def exec_store_scalar(self, ins):
@@ -245,6 +267,7 @@ class Core:
         addr = self.SRF.Read(ins.src(0)).unsigned() + ins.imm()
         val = self.SRF.Read(ins.dst())
         self.SDMEM.Write(addr, val)
+        self.trace_value(addr)
         
     @executor("SEQVV", "SNEVV", "SGTVV", "SLTVV", "SGEVV", "SLEVV")
     def exec_svv(self, ins):
@@ -299,3 +322,18 @@ class Core:
     def dumpregs(self, iodir):
         self.SRF.dump(iodir)
         self.VRF.dump(iodir)
+
+    def dumptrace(self, iodir):
+        if self.trace is None:
+            return
+
+        opfilepath = os.path.abspath(os.path.join(iodir, "trace.txt"))
+        with open(opfilepath, "w") as opf:
+            for dynins, value in self.trace:
+                ops = " ".join(str(o) for o in dynins.ops)
+                if value is not None:
+                    if type(value) is list:
+                        value = ",".join(str(v) for v in value)
+                    opf.write(f"{dynins.opcode} {ops} ({value})\n")
+                else:
+                    opf.write(f"{dynins.opcode} {ops}\n")

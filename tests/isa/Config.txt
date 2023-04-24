@@ -1,0 +1,13 @@
+# Dispatch Queue parameters
+dataQueueDepth = 4
+computeQueueDepth = 4
+
+# VDMEM LS parameters
+vdmNumBanks = 16
+vlsPipelineDepth = 11
+
+# Compute Pipeline parameters
+numLanes = 4
+pipelineDepthMul = 12
+pipelineDepthAdd = 2
+pipelineDepthDiv = 8

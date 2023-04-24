@@ -1,0 +1,2763 @@
+IO Directory: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/dot_prod
+Config - Parameters loaded from file: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/dot_prod/Config.txt
+Config parameters: {'dataQueueDepth': 4, 'computeQueueDepth': 4, 'vdmNumBanks': 16, 'vlsPipelineDepth': 11, 'numLanes': 4, 'pipelineDepthMul': 12, 'pipelineDepthAdd': 2, 'pipelineDepthDiv': 8}
+ITrace - Instruction trace loaded from file: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/dot_prod/trace.txt
+===== cycle 0
+  fetch: 0:CVM:[]
+===== cycle 1
+  decode: 0:CVM:[]
+  fetch: 1:POP:[SR1]
+===== cycle 2
+  dispatch scalar: 0:CVM:[]
+  decode: 1:POP:[SR1]
+  fetch: 2:LS:[SR2, SR0, 0]
+===== cycle 3
+  backend scalar: 0:CVM:[]
+  dispatch scalar: 1:POP:[SR1]
+  decode: 2:LS:[SR2, SR0, 0]
+  fetch: 3:LS:[SR3, SR0, 1]
+===== cycle 4
+  backend scalar: 1:POP:[SR1]
+  dispatch scalar: 2:LS:[SR2, SR0, 0]
+  decode: 3:LS:[SR3, SR0, 1]
+===== cycle 5
+  backend scalar: 2:LS:[SR2, SR0, 0]
+  decode: 3:LS:[SR3, SR0, 1]
+  fetch: 4:LS:[SR4, SR0, 2]
+===== cycle 6
+  dispatch scalar: 3:LS:[SR3, SR0, 1]
+  decode: 4:LS:[SR4, SR0, 2]
+===== cycle 7
+  backend scalar: 3:LS:[SR3, SR0, 1]
+  decode: 4:LS:[SR4, SR0, 2]
+  fetch: 5:LS:[SR5, SR0, 3]
+===== cycle 8
+  dispatch scalar: 4:LS:[SR4, SR0, 2]
+  decode: 5:LS:[SR5, SR0, 3]
+===== cycle 9
+  backend scalar: 4:LS:[SR4, SR0, 2]
+  decode: 5:LS:[SR5, SR0, 3]
+  fetch: 6:LS:[SR6, SR0, 4]
+===== cycle 10
+  dispatch scalar: 5:LS:[SR5, SR0, 3]
+  decode: 6:LS:[SR6, SR0, 4]
+===== cycle 11
+  backend scalar: 5:LS:[SR5, SR0, 3]
+  decode: 6:LS:[SR6, SR0, 4]
+  fetch: 7:LS:[SR7, SR0, 5]
+===== cycle 12
+  dispatch scalar: 6:LS:[SR6, SR0, 4]
+  decode: 7:LS:[SR7, SR0, 5]
+===== cycle 13
+  backend scalar: 6:LS:[SR6, SR0, 4]
+  decode: 7:LS:[SR7, SR0, 5]
+  fetch: 8:MTCL:[SR2]
+===== cycle 14
+  dispatch scalar: 7:LS:[SR7, SR0, 5]
+  decode: 8:MTCL:[SR2]
+  fetch: 9:LV:[VR1, SR4]
+===== cycle 15
+  backend scalar: 7:LS:[SR7, SR0, 5]
+  dispatch scalar: 8:MTCL:[SR2]
+  decode: 9:LV:[VR1, SR4]
+  fetch: 10:LV:[VR2, SR5]
+===== cycle 16
+  backend scalar: 8:MTCL:[SR2]
+  dispatch vmem: 9:LV:[VR1, SR4]
+  decode: 10:LV:[VR2, SR5]
+  fetch: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 17
+  backend mem: 9:LV:[VR1, SR4] cycles 11
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 18
+  backend mem: 9:LV:[VR1, SR4] cycles 10
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 19
+  backend mem: 9:LV:[VR1, SR4] cycles 9
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 20
+  backend mem: 9:LV:[VR1, SR4] cycles 8
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 21
+  backend mem: 9:LV:[VR1, SR4] cycles 7
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 22
+  backend mem: 9:LV:[VR1, SR4] cycles 6
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 23
+  backend mem: 9:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 24
+  backend mem: 9:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 25
+  backend mem: 9:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 26
+  backend mem: 9:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 27
+  backend mem: 9:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 10:LV:[VR2, SR5]
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 28
+  backend mem: 10:LV:[VR2, SR5] cycles 11
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 29
+  backend mem: 10:LV:[VR2, SR5] cycles 10
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 30
+  backend mem: 10:LV:[VR2, SR5] cycles 9
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 31
+  backend mem: 10:LV:[VR2, SR5] cycles 8
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 32
+  backend mem: 10:LV:[VR2, SR5] cycles 7
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 33
+  backend mem: 10:LV:[VR2, SR5] cycles 6
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 34
+  backend mem: 10:LV:[VR2, SR5] cycles 5
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 35
+  backend mem: 10:LV:[VR2, SR5] cycles 4
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 36
+  backend mem: 10:LV:[VR2, SR5] cycles 3
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 37
+  backend mem: 10:LV:[VR2, SR5] cycles 2
+  decode: 11:MULVV:[VR3, VR1, VR2]
+===== cycle 38
+  backend mem: 10:LV:[VR2, SR5] cycles 1
+  decode: 11:MULVV:[VR3, VR1, VR2]
+  fetch: 12:ADD:[SR4, SR4, SR2]
+===== cycle 39
+  dispatch vcomp: 11:MULVV:[VR3, VR1, VR2]
+  decode: 12:ADD:[SR4, SR4, SR2]
+  fetch: 13:ADD:[SR5, SR5, SR2]
+===== cycle 40
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 12
+  dispatch scalar: 12:ADD:[SR4, SR4, SR2]
+  decode: 13:ADD:[SR5, SR5, SR2]
+===== cycle 41
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 11
+  backend scalar: 12:ADD:[SR4, SR4, SR2]
+  decode: 13:ADD:[SR5, SR5, SR2]
+  fetch: 14:SUB:[SR3, SR3, SR2]
+===== cycle 42
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 10
+  dispatch scalar: 13:ADD:[SR5, SR5, SR2]
+  decode: 14:SUB:[SR3, SR3, SR2]
+===== cycle 43
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 9
+  backend scalar: 13:ADD:[SR5, SR5, SR2]
+  decode: 14:SUB:[SR3, SR3, SR2]
+  fetch: 15:MTCL:[SR1]
+===== cycle 44
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 8
+  dispatch scalar: 14:SUB:[SR3, SR3, SR2]
+  decode: 15:MTCL:[SR1]
+  fetch: 16:LV:[VR1, SR4]
+===== cycle 45
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 7
+  backend scalar: 14:SUB:[SR3, SR3, SR2]
+  dispatch scalar: 15:MTCL:[SR1]
+  decode: 16:LV:[VR1, SR4]
+===== cycle 46
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 6
+  backend scalar: 15:MTCL:[SR1]
+  decode: 16:LV:[VR1, SR4]
+===== cycle 47
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 5
+  decode: 16:LV:[VR1, SR4]
+===== cycle 48
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 4
+  decode: 16:LV:[VR1, SR4]
+===== cycle 49
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 3
+  decode: 16:LV:[VR1, SR4]
+===== cycle 50
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 2
+  decode: 16:LV:[VR1, SR4]
+===== cycle 51
+  backend mul: 11:MULVV:[VR3, VR1, VR2] cycles 1
+  decode: 16:LV:[VR1, SR4]
+  fetch: 17:LV:[VR2, SR5]
+===== cycle 52
+  dispatch vmem: 16:LV:[VR1, SR4]
+  decode: 17:LV:[VR2, SR5]
+  fetch: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 53
+  backend mem: 16:LV:[VR1, SR4] cycles 14
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 54
+  backend mem: 16:LV:[VR1, SR4] cycles 13
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 55
+  backend mem: 16:LV:[VR1, SR4] cycles 12
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 56
+  backend mem: 16:LV:[VR1, SR4] cycles 11
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 57
+  backend mem: 16:LV:[VR1, SR4] cycles 10
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 58
+  backend mem: 16:LV:[VR1, SR4] cycles 9
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 59
+  backend mem: 16:LV:[VR1, SR4] cycles 8
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 60
+  backend mem: 16:LV:[VR1, SR4] cycles 7
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 61
+  backend mem: 16:LV:[VR1, SR4] cycles 6
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 62
+  backend mem: 16:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 63
+  backend mem: 16:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 64
+  backend mem: 16:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 65
+  backend mem: 16:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 66
+  backend mem: 16:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 17:LV:[VR2, SR5]
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 67
+  backend mem: 17:LV:[VR2, SR5] cycles 14
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 68
+  backend mem: 17:LV:[VR2, SR5] cycles 13
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 69
+  backend mem: 17:LV:[VR2, SR5] cycles 12
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 70
+  backend mem: 17:LV:[VR2, SR5] cycles 11
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 71
+  backend mem: 17:LV:[VR2, SR5] cycles 10
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 72
+  backend mem: 17:LV:[VR2, SR5] cycles 9
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 73
+  backend mem: 17:LV:[VR2, SR5] cycles 8
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 74
+  backend mem: 17:LV:[VR2, SR5] cycles 7
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 75
+  backend mem: 17:LV:[VR2, SR5] cycles 6
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 76
+  backend mem: 17:LV:[VR2, SR5] cycles 5
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 77
+  backend mem: 17:LV:[VR2, SR5] cycles 4
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 78
+  backend mem: 17:LV:[VR2, SR5] cycles 3
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 79
+  backend mem: 17:LV:[VR2, SR5] cycles 2
+  decode: 18:MULVV:[VR4, VR1, VR2]
+===== cycle 80
+  backend mem: 17:LV:[VR2, SR5] cycles 1
+  decode: 18:MULVV:[VR4, VR1, VR2]
+  fetch: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 81
+  dispatch vcomp: 18:MULVV:[VR4, VR1, VR2]
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 82
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 83
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 84
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 85
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 86
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 87
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 88
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 89
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 90
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 91
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 92
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 93
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 94
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 95
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 96
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 97
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 98
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 99
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 100
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 101
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 102
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 103
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 104
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 105
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 106
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 107
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+===== cycle 108
+  backend mul: 18:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 19:ADDVV:[VR3, VR3, VR4]
+  fetch: 20:ADD:[SR4, SR4, SR1]
+===== cycle 109
+  dispatch vcomp: 19:ADDVV:[VR3, VR3, VR4]
+  decode: 20:ADD:[SR4, SR4, SR1]
+  fetch: 21:ADD:[SR5, SR5, SR1]
+===== cycle 110
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 20:ADD:[SR4, SR4, SR1]
+  decode: 21:ADD:[SR5, SR5, SR1]
+===== cycle 111
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 20:ADD:[SR4, SR4, SR1]
+  decode: 21:ADD:[SR5, SR5, SR1]
+  fetch: 22:SUB:[SR3, SR3, SR1]
+===== cycle 112
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 21:ADD:[SR5, SR5, SR1]
+  decode: 22:SUB:[SR3, SR3, SR1]
+===== cycle 113
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 21:ADD:[SR5, SR5, SR1]
+  decode: 22:SUB:[SR3, SR3, SR1]
+  fetch: 23:BGT:[SR3, SR0, -7]
+===== cycle 114
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 22:SUB:[SR3, SR3, SR1]
+  decode: 23:BGT:[SR3, SR0, -7]
+===== cycle 115
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 22:SUB:[SR3, SR3, SR1]
+  decode: 23:BGT:[SR3, SR0, -7]
+  fetch: 24:LV:[VR1, SR4]
+===== cycle 116
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 23:BGT:[SR3, SR0, -7]
+  decode: 24:LV:[VR1, SR4]
+  fetch: 25:LV:[VR2, SR5]
+===== cycle 117
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 23:BGT:[SR3, SR0, -7]
+  dispatch vmem: 24:LV:[VR1, SR4]
+  decode: 25:LV:[VR2, SR5]
+  fetch: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 118
+  backend mem: 24:LV:[VR1, SR4] cycles 14
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 119
+  backend mem: 24:LV:[VR1, SR4] cycles 13
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 120
+  backend mem: 24:LV:[VR1, SR4] cycles 12
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 121
+  backend mem: 24:LV:[VR1, SR4] cycles 11
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 122
+  backend mem: 24:LV:[VR1, SR4] cycles 10
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 123
+  backend mem: 24:LV:[VR1, SR4] cycles 9
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 124
+  backend mem: 24:LV:[VR1, SR4] cycles 8
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 125
+  backend mem: 24:LV:[VR1, SR4] cycles 7
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 126
+  backend mem: 24:LV:[VR1, SR4] cycles 6
+  backend add: 19:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 127
+  backend mem: 24:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 128
+  backend mem: 24:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 129
+  backend mem: 24:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 130
+  backend mem: 24:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 131
+  backend mem: 24:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 25:LV:[VR2, SR5]
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 132
+  backend mem: 25:LV:[VR2, SR5] cycles 14
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 133
+  backend mem: 25:LV:[VR2, SR5] cycles 13
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 134
+  backend mem: 25:LV:[VR2, SR5] cycles 12
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 135
+  backend mem: 25:LV:[VR2, SR5] cycles 11
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 136
+  backend mem: 25:LV:[VR2, SR5] cycles 10
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 137
+  backend mem: 25:LV:[VR2, SR5] cycles 9
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 138
+  backend mem: 25:LV:[VR2, SR5] cycles 8
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 139
+  backend mem: 25:LV:[VR2, SR5] cycles 7
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 140
+  backend mem: 25:LV:[VR2, SR5] cycles 6
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 141
+  backend mem: 25:LV:[VR2, SR5] cycles 5
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 142
+  backend mem: 25:LV:[VR2, SR5] cycles 4
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 143
+  backend mem: 25:LV:[VR2, SR5] cycles 3
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 144
+  backend mem: 25:LV:[VR2, SR5] cycles 2
+  decode: 26:MULVV:[VR4, VR1, VR2]
+===== cycle 145
+  backend mem: 25:LV:[VR2, SR5] cycles 1
+  decode: 26:MULVV:[VR4, VR1, VR2]
+  fetch: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 146
+  dispatch vcomp: 26:MULVV:[VR4, VR1, VR2]
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 147
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 148
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 149
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 150
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 151
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 152
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 153
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 154
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 155
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 156
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 157
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 158
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 159
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 160
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 161
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 162
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 163
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 164
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 165
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 166
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 167
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 168
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 169
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 170
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 171
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 172
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+===== cycle 173
+  backend mul: 26:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 27:ADDVV:[VR3, VR3, VR4]
+  fetch: 28:ADD:[SR4, SR4, SR1]
+===== cycle 174
+  dispatch vcomp: 27:ADDVV:[VR3, VR3, VR4]
+  decode: 28:ADD:[SR4, SR4, SR1]
+  fetch: 29:ADD:[SR5, SR5, SR1]
+===== cycle 175
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 28:ADD:[SR4, SR4, SR1]
+  decode: 29:ADD:[SR5, SR5, SR1]
+===== cycle 176
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 28:ADD:[SR4, SR4, SR1]
+  decode: 29:ADD:[SR5, SR5, SR1]
+  fetch: 30:SUB:[SR3, SR3, SR1]
+===== cycle 177
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 29:ADD:[SR5, SR5, SR1]
+  decode: 30:SUB:[SR3, SR3, SR1]
+===== cycle 178
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 29:ADD:[SR5, SR5, SR1]
+  decode: 30:SUB:[SR3, SR3, SR1]
+  fetch: 31:BGT:[SR3, SR0, -7]
+===== cycle 179
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 30:SUB:[SR3, SR3, SR1]
+  decode: 31:BGT:[SR3, SR0, -7]
+===== cycle 180
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 30:SUB:[SR3, SR3, SR1]
+  decode: 31:BGT:[SR3, SR0, -7]
+  fetch: 32:LV:[VR1, SR4]
+===== cycle 181
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 31:BGT:[SR3, SR0, -7]
+  decode: 32:LV:[VR1, SR4]
+  fetch: 33:LV:[VR2, SR5]
+===== cycle 182
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 31:BGT:[SR3, SR0, -7]
+  dispatch vmem: 32:LV:[VR1, SR4]
+  decode: 33:LV:[VR2, SR5]
+  fetch: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 183
+  backend mem: 32:LV:[VR1, SR4] cycles 14
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 184
+  backend mem: 32:LV:[VR1, SR4] cycles 13
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 185
+  backend mem: 32:LV:[VR1, SR4] cycles 12
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 186
+  backend mem: 32:LV:[VR1, SR4] cycles 11
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 187
+  backend mem: 32:LV:[VR1, SR4] cycles 10
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 188
+  backend mem: 32:LV:[VR1, SR4] cycles 9
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 189
+  backend mem: 32:LV:[VR1, SR4] cycles 8
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 190
+  backend mem: 32:LV:[VR1, SR4] cycles 7
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 191
+  backend mem: 32:LV:[VR1, SR4] cycles 6
+  backend add: 27:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 192
+  backend mem: 32:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 193
+  backend mem: 32:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 194
+  backend mem: 32:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 195
+  backend mem: 32:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 196
+  backend mem: 32:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 33:LV:[VR2, SR5]
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 197
+  backend mem: 33:LV:[VR2, SR5] cycles 14
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 198
+  backend mem: 33:LV:[VR2, SR5] cycles 13
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 199
+  backend mem: 33:LV:[VR2, SR5] cycles 12
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 200
+  backend mem: 33:LV:[VR2, SR5] cycles 11
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 201
+  backend mem: 33:LV:[VR2, SR5] cycles 10
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 202
+  backend mem: 33:LV:[VR2, SR5] cycles 9
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 203
+  backend mem: 33:LV:[VR2, SR5] cycles 8
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 204
+  backend mem: 33:LV:[VR2, SR5] cycles 7
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 205
+  backend mem: 33:LV:[VR2, SR5] cycles 6
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 206
+  backend mem: 33:LV:[VR2, SR5] cycles 5
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 207
+  backend mem: 33:LV:[VR2, SR5] cycles 4
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 208
+  backend mem: 33:LV:[VR2, SR5] cycles 3
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 209
+  backend mem: 33:LV:[VR2, SR5] cycles 2
+  decode: 34:MULVV:[VR4, VR1, VR2]
+===== cycle 210
+  backend mem: 33:LV:[VR2, SR5] cycles 1
+  decode: 34:MULVV:[VR4, VR1, VR2]
+  fetch: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 211
+  dispatch vcomp: 34:MULVV:[VR4, VR1, VR2]
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 212
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 213
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 214
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 215
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 216
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 217
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 218
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 219
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 220
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 221
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 222
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 223
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 224
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 225
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 226
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 227
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 228
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 229
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 230
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 231
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 232
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 233
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 234
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 235
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 236
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 237
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+===== cycle 238
+  backend mul: 34:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 35:ADDVV:[VR3, VR3, VR4]
+  fetch: 36:ADD:[SR4, SR4, SR1]
+===== cycle 239
+  dispatch vcomp: 35:ADDVV:[VR3, VR3, VR4]
+  decode: 36:ADD:[SR4, SR4, SR1]
+  fetch: 37:ADD:[SR5, SR5, SR1]
+===== cycle 240
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 36:ADD:[SR4, SR4, SR1]
+  decode: 37:ADD:[SR5, SR5, SR1]
+===== cycle 241
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 36:ADD:[SR4, SR4, SR1]
+  decode: 37:ADD:[SR5, SR5, SR1]
+  fetch: 38:SUB:[SR3, SR3, SR1]
+===== cycle 242
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 37:ADD:[SR5, SR5, SR1]
+  decode: 38:SUB:[SR3, SR3, SR1]
+===== cycle 243
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 37:ADD:[SR5, SR5, SR1]
+  decode: 38:SUB:[SR3, SR3, SR1]
+  fetch: 39:BGT:[SR3, SR0, -7]
+===== cycle 244
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 38:SUB:[SR3, SR3, SR1]
+  decode: 39:BGT:[SR3, SR0, -7]
+===== cycle 245
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 38:SUB:[SR3, SR3, SR1]
+  decode: 39:BGT:[SR3, SR0, -7]
+  fetch: 40:LV:[VR1, SR4]
+===== cycle 246
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 39:BGT:[SR3, SR0, -7]
+  decode: 40:LV:[VR1, SR4]
+  fetch: 41:LV:[VR2, SR5]
+===== cycle 247
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 39:BGT:[SR3, SR0, -7]
+  dispatch vmem: 40:LV:[VR1, SR4]
+  decode: 41:LV:[VR2, SR5]
+  fetch: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 248
+  backend mem: 40:LV:[VR1, SR4] cycles 14
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 249
+  backend mem: 40:LV:[VR1, SR4] cycles 13
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 250
+  backend mem: 40:LV:[VR1, SR4] cycles 12
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 251
+  backend mem: 40:LV:[VR1, SR4] cycles 11
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 252
+  backend mem: 40:LV:[VR1, SR4] cycles 10
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 253
+  backend mem: 40:LV:[VR1, SR4] cycles 9
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 254
+  backend mem: 40:LV:[VR1, SR4] cycles 8
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 255
+  backend mem: 40:LV:[VR1, SR4] cycles 7
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 256
+  backend mem: 40:LV:[VR1, SR4] cycles 6
+  backend add: 35:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 257
+  backend mem: 40:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 258
+  backend mem: 40:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 259
+  backend mem: 40:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 260
+  backend mem: 40:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 261
+  backend mem: 40:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 41:LV:[VR2, SR5]
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 262
+  backend mem: 41:LV:[VR2, SR5] cycles 14
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 263
+  backend mem: 41:LV:[VR2, SR5] cycles 13
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 264
+  backend mem: 41:LV:[VR2, SR5] cycles 12
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 265
+  backend mem: 41:LV:[VR2, SR5] cycles 11
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 266
+  backend mem: 41:LV:[VR2, SR5] cycles 10
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 267
+  backend mem: 41:LV:[VR2, SR5] cycles 9
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 268
+  backend mem: 41:LV:[VR2, SR5] cycles 8
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 269
+  backend mem: 41:LV:[VR2, SR5] cycles 7
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 270
+  backend mem: 41:LV:[VR2, SR5] cycles 6
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 271
+  backend mem: 41:LV:[VR2, SR5] cycles 5
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 272
+  backend mem: 41:LV:[VR2, SR5] cycles 4
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 273
+  backend mem: 41:LV:[VR2, SR5] cycles 3
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 274
+  backend mem: 41:LV:[VR2, SR5] cycles 2
+  decode: 42:MULVV:[VR4, VR1, VR2]
+===== cycle 275
+  backend mem: 41:LV:[VR2, SR5] cycles 1
+  decode: 42:MULVV:[VR4, VR1, VR2]
+  fetch: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 276
+  dispatch vcomp: 42:MULVV:[VR4, VR1, VR2]
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 277
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 278
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 279
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 280
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 281
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 282
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 283
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 284
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 285
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 286
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 287
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 288
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 289
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 290
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 291
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 292
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 293
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 294
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 295
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 296
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 297
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 298
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 299
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 300
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 301
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 302
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+===== cycle 303
+  backend mul: 42:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 43:ADDVV:[VR3, VR3, VR4]
+  fetch: 44:ADD:[SR4, SR4, SR1]
+===== cycle 304
+  dispatch vcomp: 43:ADDVV:[VR3, VR3, VR4]
+  decode: 44:ADD:[SR4, SR4, SR1]
+  fetch: 45:ADD:[SR5, SR5, SR1]
+===== cycle 305
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 44:ADD:[SR4, SR4, SR1]
+  decode: 45:ADD:[SR5, SR5, SR1]
+===== cycle 306
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 44:ADD:[SR4, SR4, SR1]
+  decode: 45:ADD:[SR5, SR5, SR1]
+  fetch: 46:SUB:[SR3, SR3, SR1]
+===== cycle 307
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 45:ADD:[SR5, SR5, SR1]
+  decode: 46:SUB:[SR3, SR3, SR1]
+===== cycle 308
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 45:ADD:[SR5, SR5, SR1]
+  decode: 46:SUB:[SR3, SR3, SR1]
+  fetch: 47:BGT:[SR3, SR0, -7]
+===== cycle 309
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 46:SUB:[SR3, SR3, SR1]
+  decode: 47:BGT:[SR3, SR0, -7]
+===== cycle 310
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 46:SUB:[SR3, SR3, SR1]
+  decode: 47:BGT:[SR3, SR0, -7]
+  fetch: 48:LV:[VR1, SR4]
+===== cycle 311
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 47:BGT:[SR3, SR0, -7]
+  decode: 48:LV:[VR1, SR4]
+  fetch: 49:LV:[VR2, SR5]
+===== cycle 312
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 47:BGT:[SR3, SR0, -7]
+  dispatch vmem: 48:LV:[VR1, SR4]
+  decode: 49:LV:[VR2, SR5]
+  fetch: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 313
+  backend mem: 48:LV:[VR1, SR4] cycles 14
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 314
+  backend mem: 48:LV:[VR1, SR4] cycles 13
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 315
+  backend mem: 48:LV:[VR1, SR4] cycles 12
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 316
+  backend mem: 48:LV:[VR1, SR4] cycles 11
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 317
+  backend mem: 48:LV:[VR1, SR4] cycles 10
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 318
+  backend mem: 48:LV:[VR1, SR4] cycles 9
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 319
+  backend mem: 48:LV:[VR1, SR4] cycles 8
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 320
+  backend mem: 48:LV:[VR1, SR4] cycles 7
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 321
+  backend mem: 48:LV:[VR1, SR4] cycles 6
+  backend add: 43:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 322
+  backend mem: 48:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 323
+  backend mem: 48:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 324
+  backend mem: 48:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 325
+  backend mem: 48:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 326
+  backend mem: 48:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 49:LV:[VR2, SR5]
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 327
+  backend mem: 49:LV:[VR2, SR5] cycles 14
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 328
+  backend mem: 49:LV:[VR2, SR5] cycles 13
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 329
+  backend mem: 49:LV:[VR2, SR5] cycles 12
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 330
+  backend mem: 49:LV:[VR2, SR5] cycles 11
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 331
+  backend mem: 49:LV:[VR2, SR5] cycles 10
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 332
+  backend mem: 49:LV:[VR2, SR5] cycles 9
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 333
+  backend mem: 49:LV:[VR2, SR5] cycles 8
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 334
+  backend mem: 49:LV:[VR2, SR5] cycles 7
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 335
+  backend mem: 49:LV:[VR2, SR5] cycles 6
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 336
+  backend mem: 49:LV:[VR2, SR5] cycles 5
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 337
+  backend mem: 49:LV:[VR2, SR5] cycles 4
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 338
+  backend mem: 49:LV:[VR2, SR5] cycles 3
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 339
+  backend mem: 49:LV:[VR2, SR5] cycles 2
+  decode: 50:MULVV:[VR4, VR1, VR2]
+===== cycle 340
+  backend mem: 49:LV:[VR2, SR5] cycles 1
+  decode: 50:MULVV:[VR4, VR1, VR2]
+  fetch: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 341
+  dispatch vcomp: 50:MULVV:[VR4, VR1, VR2]
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 342
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 343
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 344
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 345
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 346
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 347
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 348
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 349
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 350
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 351
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 352
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 353
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 354
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 355
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 356
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 357
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 358
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 359
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 360
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 361
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 362
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 363
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 364
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 365
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 366
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 367
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+===== cycle 368
+  backend mul: 50:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 51:ADDVV:[VR3, VR3, VR4]
+  fetch: 52:ADD:[SR4, SR4, SR1]
+===== cycle 369
+  dispatch vcomp: 51:ADDVV:[VR3, VR3, VR4]
+  decode: 52:ADD:[SR4, SR4, SR1]
+  fetch: 53:ADD:[SR5, SR5, SR1]
+===== cycle 370
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 52:ADD:[SR4, SR4, SR1]
+  decode: 53:ADD:[SR5, SR5, SR1]
+===== cycle 371
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 52:ADD:[SR4, SR4, SR1]
+  decode: 53:ADD:[SR5, SR5, SR1]
+  fetch: 54:SUB:[SR3, SR3, SR1]
+===== cycle 372
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 53:ADD:[SR5, SR5, SR1]
+  decode: 54:SUB:[SR3, SR3, SR1]
+===== cycle 373
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 53:ADD:[SR5, SR5, SR1]
+  decode: 54:SUB:[SR3, SR3, SR1]
+  fetch: 55:BGT:[SR3, SR0, -7]
+===== cycle 374
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 54:SUB:[SR3, SR3, SR1]
+  decode: 55:BGT:[SR3, SR0, -7]
+===== cycle 375
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 54:SUB:[SR3, SR3, SR1]
+  decode: 55:BGT:[SR3, SR0, -7]
+  fetch: 56:LV:[VR1, SR4]
+===== cycle 376
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 55:BGT:[SR3, SR0, -7]
+  decode: 56:LV:[VR1, SR4]
+  fetch: 57:LV:[VR2, SR5]
+===== cycle 377
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 55:BGT:[SR3, SR0, -7]
+  dispatch vmem: 56:LV:[VR1, SR4]
+  decode: 57:LV:[VR2, SR5]
+  fetch: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 378
+  backend mem: 56:LV:[VR1, SR4] cycles 14
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 379
+  backend mem: 56:LV:[VR1, SR4] cycles 13
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 380
+  backend mem: 56:LV:[VR1, SR4] cycles 12
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 381
+  backend mem: 56:LV:[VR1, SR4] cycles 11
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 382
+  backend mem: 56:LV:[VR1, SR4] cycles 10
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 383
+  backend mem: 56:LV:[VR1, SR4] cycles 9
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 384
+  backend mem: 56:LV:[VR1, SR4] cycles 8
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 385
+  backend mem: 56:LV:[VR1, SR4] cycles 7
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 386
+  backend mem: 56:LV:[VR1, SR4] cycles 6
+  backend add: 51:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 387
+  backend mem: 56:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 388
+  backend mem: 56:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 389
+  backend mem: 56:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 390
+  backend mem: 56:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 391
+  backend mem: 56:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 57:LV:[VR2, SR5]
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 392
+  backend mem: 57:LV:[VR2, SR5] cycles 14
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 393
+  backend mem: 57:LV:[VR2, SR5] cycles 13
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 394
+  backend mem: 57:LV:[VR2, SR5] cycles 12
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 395
+  backend mem: 57:LV:[VR2, SR5] cycles 11
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 396
+  backend mem: 57:LV:[VR2, SR5] cycles 10
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 397
+  backend mem: 57:LV:[VR2, SR5] cycles 9
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 398
+  backend mem: 57:LV:[VR2, SR5] cycles 8
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 399
+  backend mem: 57:LV:[VR2, SR5] cycles 7
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 400
+  backend mem: 57:LV:[VR2, SR5] cycles 6
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 401
+  backend mem: 57:LV:[VR2, SR5] cycles 5
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 402
+  backend mem: 57:LV:[VR2, SR5] cycles 4
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 403
+  backend mem: 57:LV:[VR2, SR5] cycles 3
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 404
+  backend mem: 57:LV:[VR2, SR5] cycles 2
+  decode: 58:MULVV:[VR4, VR1, VR2]
+===== cycle 405
+  backend mem: 57:LV:[VR2, SR5] cycles 1
+  decode: 58:MULVV:[VR4, VR1, VR2]
+  fetch: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 406
+  dispatch vcomp: 58:MULVV:[VR4, VR1, VR2]
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 407
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 408
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 409
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 410
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 411
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 412
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 413
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 414
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 415
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 416
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 417
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 418
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 419
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 420
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 421
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 422
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 423
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 424
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 425
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 426
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 427
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 428
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 429
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 430
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 431
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 432
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+===== cycle 433
+  backend mul: 58:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 59:ADDVV:[VR3, VR3, VR4]
+  fetch: 60:ADD:[SR4, SR4, SR1]
+===== cycle 434
+  dispatch vcomp: 59:ADDVV:[VR3, VR3, VR4]
+  decode: 60:ADD:[SR4, SR4, SR1]
+  fetch: 61:ADD:[SR5, SR5, SR1]
+===== cycle 435
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 60:ADD:[SR4, SR4, SR1]
+  decode: 61:ADD:[SR5, SR5, SR1]
+===== cycle 436
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 60:ADD:[SR4, SR4, SR1]
+  decode: 61:ADD:[SR5, SR5, SR1]
+  fetch: 62:SUB:[SR3, SR3, SR1]
+===== cycle 437
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 61:ADD:[SR5, SR5, SR1]
+  decode: 62:SUB:[SR3, SR3, SR1]
+===== cycle 438
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 61:ADD:[SR5, SR5, SR1]
+  decode: 62:SUB:[SR3, SR3, SR1]
+  fetch: 63:BGT:[SR3, SR0, -7]
+===== cycle 439
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 62:SUB:[SR3, SR3, SR1]
+  decode: 63:BGT:[SR3, SR0, -7]
+===== cycle 440
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 62:SUB:[SR3, SR3, SR1]
+  decode: 63:BGT:[SR3, SR0, -7]
+  fetch: 64:LV:[VR1, SR4]
+===== cycle 441
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 63:BGT:[SR3, SR0, -7]
+  decode: 64:LV:[VR1, SR4]
+  fetch: 65:LV:[VR2, SR5]
+===== cycle 442
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 63:BGT:[SR3, SR0, -7]
+  dispatch vmem: 64:LV:[VR1, SR4]
+  decode: 65:LV:[VR2, SR5]
+  fetch: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 443
+  backend mem: 64:LV:[VR1, SR4] cycles 14
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 444
+  backend mem: 64:LV:[VR1, SR4] cycles 13
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 8
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 445
+  backend mem: 64:LV:[VR1, SR4] cycles 12
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 7
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 446
+  backend mem: 64:LV:[VR1, SR4] cycles 11
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 6
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 447
+  backend mem: 64:LV:[VR1, SR4] cycles 10
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 448
+  backend mem: 64:LV:[VR1, SR4] cycles 9
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 4
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 449
+  backend mem: 64:LV:[VR1, SR4] cycles 8
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 450
+  backend mem: 64:LV:[VR1, SR4] cycles 7
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 451
+  backend mem: 64:LV:[VR1, SR4] cycles 6
+  backend add: 59:ADDVV:[VR3, VR3, VR4] cycles 1
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 452
+  backend mem: 64:LV:[VR1, SR4] cycles 5
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 453
+  backend mem: 64:LV:[VR1, SR4] cycles 4
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 454
+  backend mem: 64:LV:[VR1, SR4] cycles 3
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 455
+  backend mem: 64:LV:[VR1, SR4] cycles 2
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 456
+  backend mem: 64:LV:[VR1, SR4] cycles 1
+  dispatch vmem: 65:LV:[VR2, SR5]
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 457
+  backend mem: 65:LV:[VR2, SR5] cycles 14
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 458
+  backend mem: 65:LV:[VR2, SR5] cycles 13
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 459
+  backend mem: 65:LV:[VR2, SR5] cycles 12
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 460
+  backend mem: 65:LV:[VR2, SR5] cycles 11
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 461
+  backend mem: 65:LV:[VR2, SR5] cycles 10
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 462
+  backend mem: 65:LV:[VR2, SR5] cycles 9
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 463
+  backend mem: 65:LV:[VR2, SR5] cycles 8
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 464
+  backend mem: 65:LV:[VR2, SR5] cycles 7
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 465
+  backend mem: 65:LV:[VR2, SR5] cycles 6
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 466
+  backend mem: 65:LV:[VR2, SR5] cycles 5
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 467
+  backend mem: 65:LV:[VR2, SR5] cycles 4
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 468
+  backend mem: 65:LV:[VR2, SR5] cycles 3
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 469
+  backend mem: 65:LV:[VR2, SR5] cycles 2
+  decode: 66:MULVV:[VR4, VR1, VR2]
+===== cycle 470
+  backend mem: 65:LV:[VR2, SR5] cycles 1
+  decode: 66:MULVV:[VR4, VR1, VR2]
+  fetch: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 471
+  dispatch vcomp: 66:MULVV:[VR4, VR1, VR2]
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 472
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 27
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 473
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 26
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 474
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 25
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 475
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 24
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 476
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 23
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 477
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 22
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 478
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 21
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 479
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 20
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 480
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 19
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 481
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 18
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 482
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 17
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 483
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 16
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 484
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 15
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 485
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 14
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 486
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 13
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 487
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 12
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 488
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 11
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 489
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 10
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 490
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 9
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 491
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 8
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 492
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 7
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 493
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 6
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 494
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 5
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 495
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 4
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 496
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 3
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 497
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 2
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+===== cycle 498
+  backend mul: 66:MULVV:[VR4, VR1, VR2] cycles 1
+  decode: 67:ADDVV:[VR3, VR3, VR4]
+  fetch: 68:ADD:[SR4, SR4, SR1]
+===== cycle 499
+  dispatch vcomp: 67:ADDVV:[VR3, VR3, VR4]
+  decode: 68:ADD:[SR4, SR4, SR1]
+  fetch: 69:ADD:[SR5, SR5, SR1]
+===== cycle 500
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 17
+  dispatch scalar: 68:ADD:[SR4, SR4, SR1]
+  decode: 69:ADD:[SR5, SR5, SR1]
+===== cycle 501
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 16
+  backend scalar: 68:ADD:[SR4, SR4, SR1]
+  decode: 69:ADD:[SR5, SR5, SR1]
+  fetch: 70:SUB:[SR3, SR3, SR1]
+===== cycle 502
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 15
+  dispatch scalar: 69:ADD:[SR5, SR5, SR1]
+  decode: 70:SUB:[SR3, SR3, SR1]
+===== cycle 503
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 14
+  backend scalar: 69:ADD:[SR5, SR5, SR1]
+  decode: 70:SUB:[SR3, SR3, SR1]
+  fetch: 71:BGT:[SR3, SR0, -7]
+===== cycle 504
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 13
+  dispatch scalar: 70:SUB:[SR3, SR3, SR1]
+  decode: 71:BGT:[SR3, SR0, -7]
+===== cycle 505
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 12
+  backend scalar: 70:SUB:[SR3, SR3, SR1]
+  decode: 71:BGT:[SR3, SR0, -7]
+  fetch: 72:SV:[VR3, SR6]
+===== cycle 506
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 11
+  dispatch scalar: 71:BGT:[SR3, SR0, -7]
+  decode: 72:SV:[VR3, SR6]
+===== cycle 507
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 10
+  backend scalar: 71:BGT:[SR3, SR0, -7]
+  decode: 72:SV:[VR3, SR6]
+===== cycle 508
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 9
+  decode: 72:SV:[VR3, SR6]
+===== cycle 509
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 8
+  decode: 72:SV:[VR3, SR6]
+===== cycle 510
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 7
+  decode: 72:SV:[VR3, SR6]
+===== cycle 511
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 6
+  decode: 72:SV:[VR3, SR6]
+===== cycle 512
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 5
+  decode: 72:SV:[VR3, SR6]
+===== cycle 513
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 4
+  decode: 72:SV:[VR3, SR6]
+===== cycle 514
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 3
+  decode: 72:SV:[VR3, SR6]
+===== cycle 515
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 2
+  decode: 72:SV:[VR3, SR6]
+===== cycle 516
+  backend add: 67:ADDVV:[VR3, VR3, VR4] cycles 1
+  decode: 72:SV:[VR3, SR6]
+  fetch: 73:SRL:[SR1, SR1, SR7]
+===== cycle 517
+  dispatch vmem: 72:SV:[VR3, SR6]
+  decode: 73:SRL:[SR1, SR1, SR7]
+  fetch: 74:MTCL:[SR1]
+===== cycle 518
+  backend mem: 72:SV:[VR3, SR6] cycles 14
+  dispatch scalar: 73:SRL:[SR1, SR1, SR7]
+  decode: 74:MTCL:[SR1]
+===== cycle 519
+  backend mem: 72:SV:[VR3, SR6] cycles 13
+  backend scalar: 73:SRL:[SR1, SR1, SR7]
+  decode: 74:MTCL:[SR1]
+  fetch: 75:LV:[VR3, SR6]
+===== cycle 520
+  backend mem: 72:SV:[VR3, SR6] cycles 12
+  dispatch scalar: 74:MTCL:[SR1]
+  decode: 75:LV:[VR3, SR6]
+===== cycle 521
+  backend mem: 72:SV:[VR3, SR6] cycles 11
+  backend scalar: 74:MTCL:[SR1]
+  decode: 75:LV:[VR3, SR6]
+===== cycle 522
+  backend mem: 72:SV:[VR3, SR6] cycles 10
+  decode: 75:LV:[VR3, SR6]
+===== cycle 523
+  backend mem: 72:SV:[VR3, SR6] cycles 9
+  decode: 75:LV:[VR3, SR6]
+===== cycle 524
+  backend mem: 72:SV:[VR3, SR6] cycles 8
+  decode: 75:LV:[VR3, SR6]
+===== cycle 525
+  backend mem: 72:SV:[VR3, SR6] cycles 7
+  decode: 75:LV:[VR3, SR6]
+===== cycle 526
+  backend mem: 72:SV:[VR3, SR6] cycles 6
+  decode: 75:LV:[VR3, SR6]
+===== cycle 527
+  backend mem: 72:SV:[VR3, SR6] cycles 5
+  decode: 75:LV:[VR3, SR6]
+===== cycle 528
+  backend mem: 72:SV:[VR3, SR6] cycles 4
+  decode: 75:LV:[VR3, SR6]
+===== cycle 529
+  backend mem: 72:SV:[VR3, SR6] cycles 3
+  decode: 75:LV:[VR3, SR6]
+===== cycle 530
+  backend mem: 72:SV:[VR3, SR6] cycles 2
+  decode: 75:LV:[VR3, SR6]
+===== cycle 531
+  backend mem: 72:SV:[VR3, SR6] cycles 1
+  decode: 75:LV:[VR3, SR6]
+  fetch: 76:ADD:[SR3, SR6, SR1]
+===== cycle 532
+  dispatch vmem: 75:LV:[VR3, SR6]
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 533
+  backend mem: 75:LV:[VR3, SR6] cycles 12
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 534
+  backend mem: 75:LV:[VR3, SR6] cycles 11
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 535
+  backend mem: 75:LV:[VR3, SR6] cycles 10
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 536
+  backend mem: 75:LV:[VR3, SR6] cycles 9
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 537
+  backend mem: 75:LV:[VR3, SR6] cycles 8
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 538
+  backend mem: 75:LV:[VR3, SR6] cycles 7
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 539
+  backend mem: 75:LV:[VR3, SR6] cycles 6
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 540
+  backend mem: 75:LV:[VR3, SR6] cycles 5
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 541
+  backend mem: 75:LV:[VR3, SR6] cycles 4
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 542
+  backend mem: 75:LV:[VR3, SR6] cycles 3
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 543
+  backend mem: 75:LV:[VR3, SR6] cycles 2
+  decode: 76:ADD:[SR3, SR6, SR1]
+===== cycle 544
+  backend mem: 75:LV:[VR3, SR6] cycles 1
+  decode: 76:ADD:[SR3, SR6, SR1]
+  fetch: 77:LV:[VR4, SR3]
+===== cycle 545
+  dispatch scalar: 76:ADD:[SR3, SR6, SR1]
+  decode: 77:LV:[VR4, SR3]
+===== cycle 546
+  backend scalar: 76:ADD:[SR3, SR6, SR1]
+  decode: 77:LV:[VR4, SR3]
+  fetch: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 547
+  dispatch vmem: 77:LV:[VR4, SR3]
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 548
+  backend mem: 77:LV:[VR4, SR3] cycles 12
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 549
+  backend mem: 77:LV:[VR4, SR3] cycles 11
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 550
+  backend mem: 77:LV:[VR4, SR3] cycles 10
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 551
+  backend mem: 77:LV:[VR4, SR3] cycles 9
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 552
+  backend mem: 77:LV:[VR4, SR3] cycles 8
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 553
+  backend mem: 77:LV:[VR4, SR3] cycles 7
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 554
+  backend mem: 77:LV:[VR4, SR3] cycles 6
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 555
+  backend mem: 77:LV:[VR4, SR3] cycles 5
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 556
+  backend mem: 77:LV:[VR4, SR3] cycles 4
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 557
+  backend mem: 77:LV:[VR4, SR3] cycles 3
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 558
+  backend mem: 77:LV:[VR4, SR3] cycles 2
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+===== cycle 559
+  backend mem: 77:LV:[VR4, SR3] cycles 1
+  decode: 78:ADDVV:[VR3, VR3, VR4]
+  fetch: 79:BGT:[SR1, SR7, -7]
+===== cycle 560
+  dispatch vcomp: 78:ADDVV:[VR3, VR3, VR4]
+  decode: 79:BGT:[SR1, SR7, -7]
+  fetch: 80:SV:[VR3, SR6]
+===== cycle 561
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 9
+  dispatch scalar: 79:BGT:[SR1, SR7, -7]
+  decode: 80:SV:[VR3, SR6]
+===== cycle 562
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 8
+  backend scalar: 79:BGT:[SR1, SR7, -7]
+  decode: 80:SV:[VR3, SR6]
+===== cycle 563
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 7
+  decode: 80:SV:[VR3, SR6]
+===== cycle 564
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 6
+  decode: 80:SV:[VR3, SR6]
+===== cycle 565
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 5
+  decode: 80:SV:[VR3, SR6]
+===== cycle 566
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 4
+  decode: 80:SV:[VR3, SR6]
+===== cycle 567
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 3
+  decode: 80:SV:[VR3, SR6]
+===== cycle 568
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 2
+  decode: 80:SV:[VR3, SR6]
+===== cycle 569
+  backend add: 78:ADDVV:[VR3, VR3, VR4] cycles 1
+  decode: 80:SV:[VR3, SR6]
+  fetch: 81:SRL:[SR1, SR1, SR7]
+===== cycle 570
+  dispatch vmem: 80:SV:[VR3, SR6]
+  decode: 81:SRL:[SR1, SR1, SR7]
+  fetch: 82:MTCL:[SR1]
+===== cycle 571
+  backend mem: 80:SV:[VR3, SR6] cycles 12
+  dispatch scalar: 81:SRL:[SR1, SR1, SR7]
+  decode: 82:MTCL:[SR1]
+===== cycle 572
+  backend mem: 80:SV:[VR3, SR6] cycles 11
+  backend scalar: 81:SRL:[SR1, SR1, SR7]
+  decode: 82:MTCL:[SR1]
+  fetch: 83:LV:[VR3, SR6]
+===== cycle 573
+  backend mem: 80:SV:[VR3, SR6] cycles 10
+  dispatch scalar: 82:MTCL:[SR1]
+  decode: 83:LV:[VR3, SR6]
+===== cycle 574
+  backend mem: 80:SV:[VR3, SR6] cycles 9
+  backend scalar: 82:MTCL:[SR1]
+  decode: 83:LV:[VR3, SR6]
+===== cycle 575
+  backend mem: 80:SV:[VR3, SR6] cycles 8
+  decode: 83:LV:[VR3, SR6]
+===== cycle 576
+  backend mem: 80:SV:[VR3, SR6] cycles 7
+  decode: 83:LV:[VR3, SR6]
+===== cycle 577
+  backend mem: 80:SV:[VR3, SR6] cycles 6
+  decode: 83:LV:[VR3, SR6]
+===== cycle 578
+  backend mem: 80:SV:[VR3, SR6] cycles 5
+  decode: 83:LV:[VR3, SR6]
+===== cycle 579
+  backend mem: 80:SV:[VR3, SR6] cycles 4
+  decode: 83:LV:[VR3, SR6]
+===== cycle 580
+  backend mem: 80:SV:[VR3, SR6] cycles 3
+  decode: 83:LV:[VR3, SR6]
+===== cycle 581
+  backend mem: 80:SV:[VR3, SR6] cycles 2
+  decode: 83:LV:[VR3, SR6]
+===== cycle 582
+  backend mem: 80:SV:[VR3, SR6] cycles 1
+  decode: 83:LV:[VR3, SR6]
+  fetch: 84:ADD:[SR3, SR6, SR1]
+===== cycle 583
+  dispatch vmem: 83:LV:[VR3, SR6]
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 584
+  backend mem: 83:LV:[VR3, SR6] cycles 11
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 585
+  backend mem: 83:LV:[VR3, SR6] cycles 10
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 586
+  backend mem: 83:LV:[VR3, SR6] cycles 9
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 587
+  backend mem: 83:LV:[VR3, SR6] cycles 8
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 588
+  backend mem: 83:LV:[VR3, SR6] cycles 7
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 589
+  backend mem: 83:LV:[VR3, SR6] cycles 6
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 590
+  backend mem: 83:LV:[VR3, SR6] cycles 5
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 591
+  backend mem: 83:LV:[VR3, SR6] cycles 4
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 592
+  backend mem: 83:LV:[VR3, SR6] cycles 3
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 593
+  backend mem: 83:LV:[VR3, SR6] cycles 2
+  decode: 84:ADD:[SR3, SR6, SR1]
+===== cycle 594
+  backend mem: 83:LV:[VR3, SR6] cycles 1
+  decode: 84:ADD:[SR3, SR6, SR1]
+  fetch: 85:LV:[VR4, SR3]
+===== cycle 595
+  dispatch scalar: 84:ADD:[SR3, SR6, SR1]
+  decode: 85:LV:[VR4, SR3]
+===== cycle 596
+  backend scalar: 84:ADD:[SR3, SR6, SR1]
+  decode: 85:LV:[VR4, SR3]
+  fetch: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 597
+  dispatch vmem: 85:LV:[VR4, SR3]
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 598
+  backend mem: 85:LV:[VR4, SR3] cycles 11
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 599
+  backend mem: 85:LV:[VR4, SR3] cycles 10
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 600
+  backend mem: 85:LV:[VR4, SR3] cycles 9
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 601
+  backend mem: 85:LV:[VR4, SR3] cycles 8
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 602
+  backend mem: 85:LV:[VR4, SR3] cycles 7
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 603
+  backend mem: 85:LV:[VR4, SR3] cycles 6
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 604
+  backend mem: 85:LV:[VR4, SR3] cycles 5
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 605
+  backend mem: 85:LV:[VR4, SR3] cycles 4
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 606
+  backend mem: 85:LV:[VR4, SR3] cycles 3
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 607
+  backend mem: 85:LV:[VR4, SR3] cycles 2
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+===== cycle 608
+  backend mem: 85:LV:[VR4, SR3] cycles 1
+  decode: 86:ADDVV:[VR3, VR3, VR4]
+  fetch: 87:BGT:[SR1, SR7, -7]
+===== cycle 609
+  dispatch vcomp: 86:ADDVV:[VR3, VR3, VR4]
+  decode: 87:BGT:[SR1, SR7, -7]
+  fetch: 88:SV:[VR3, SR6]
+===== cycle 610
+  backend add: 86:ADDVV:[VR3, VR3, VR4] cycles 5
+  dispatch scalar: 87:BGT:[SR1, SR7, -7]
+  decode: 88:SV:[VR3, SR6]
+===== cycle 611
+  backend add: 86:ADDVV:[VR3, VR3, VR4] cycles 4
+  backend scalar: 87:BGT:[SR1, SR7, -7]
+  decode: 88:SV:[VR3, SR6]
+===== cycle 612
+  backend add: 86:ADDVV:[VR3, VR3, VR4] cycles 3
+  decode: 88:SV:[VR3, SR6]
+===== cycle 613
+  backend add: 86:ADDVV:[VR3, VR3, VR4] cycles 2
+  decode: 88:SV:[VR3, SR6]
+===== cycle 614
+  backend add: 86:ADDVV:[VR3, VR3, VR4] cycles 1
+  decode: 88:SV:[VR3, SR6]
+  fetch: 89:SRL:[SR1, SR1, SR7]
+===== cycle 615
+  dispatch vmem: 88:SV:[VR3, SR6]
+  decode: 89:SRL:[SR1, SR1, SR7]
+  fetch: 90:MTCL:[SR1]
+===== cycle 616
+  backend mem: 88:SV:[VR3, SR6] cycles 11
+  dispatch scalar: 89:SRL:[SR1, SR1, SR7]
+  decode: 90:MTCL:[SR1]
+===== cycle 617
+  backend mem: 88:SV:[VR3, SR6] cycles 10
+  backend scalar: 89:SRL:[SR1, SR1, SR7]
+  decode: 90:MTCL:[SR1]
+  fetch: 91:LV:[VR3, SR6]
+===== cycle 618
+  backend mem: 88:SV:[VR3, SR6] cycles 9
+  dispatch scalar: 90:MTCL:[SR1]
+  decode: 91:LV:[VR3, SR6]
+===== cycle 619
+  backend mem: 88:SV:[VR3, SR6] cycles 8
+  backend scalar: 90:MTCL:[SR1]
+  decode: 91:LV:[VR3, SR6]
+===== cycle 620
+  backend mem: 88:SV:[VR3, SR6] cycles 7
+  decode: 91:LV:[VR3, SR6]
+===== cycle 621
+  backend mem: 88:SV:[VR3, SR6] cycles 6
+  decode: 91:LV:[VR3, SR6]
+===== cycle 622
+  backend mem: 88:SV:[VR3, SR6] cycles 5
+  decode: 91:LV:[VR3, SR6]
+===== cycle 623
+  backend mem: 88:SV:[VR3, SR6] cycles 4
+  decode: 91:LV:[VR3, SR6]
+===== cycle 624
+  backend mem: 88:SV:[VR3, SR6] cycles 3
+  decode: 91:LV:[VR3, SR6]
+===== cycle 625
+  backend mem: 88:SV:[VR3, SR6] cycles 2
+  decode: 91:LV:[VR3, SR6]
+===== cycle 626
+  backend mem: 88:SV:[VR3, SR6] cycles 1
+  decode: 91:LV:[VR3, SR6]
+  fetch: 92:ADD:[SR3, SR6, SR1]
+===== cycle 627
+  dispatch vmem: 91:LV:[VR3, SR6]
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 628
+  backend mem: 91:LV:[VR3, SR6] cycles 11
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 629
+  backend mem: 91:LV:[VR3, SR6] cycles 10
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 630
+  backend mem: 91:LV:[VR3, SR6] cycles 9
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 631
+  backend mem: 91:LV:[VR3, SR6] cycles 8
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 632
+  backend mem: 91:LV:[VR3, SR6] cycles 7
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 633
+  backend mem: 91:LV:[VR3, SR6] cycles 6
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 634
+  backend mem: 91:LV:[VR3, SR6] cycles 5
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 635
+  backend mem: 91:LV:[VR3, SR6] cycles 4
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 636
+  backend mem: 91:LV:[VR3, SR6] cycles 3
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 637
+  backend mem: 91:LV:[VR3, SR6] cycles 2
+  decode: 92:ADD:[SR3, SR6, SR1]
+===== cycle 638
+  backend mem: 91:LV:[VR3, SR6] cycles 1
+  decode: 92:ADD:[SR3, SR6, SR1]
+  fetch: 93:LV:[VR4, SR3]
+===== cycle 639
+  dispatch scalar: 92:ADD:[SR3, SR6, SR1]
+  decode: 93:LV:[VR4, SR3]
+===== cycle 640
+  backend scalar: 92:ADD:[SR3, SR6, SR1]
+  decode: 93:LV:[VR4, SR3]
+  fetch: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 641
+  dispatch vmem: 93:LV:[VR4, SR3]
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 642
+  backend mem: 93:LV:[VR4, SR3] cycles 11
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 643
+  backend mem: 93:LV:[VR4, SR3] cycles 10
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 644
+  backend mem: 93:LV:[VR4, SR3] cycles 9
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 645
+  backend mem: 93:LV:[VR4, SR3] cycles 8
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 646
+  backend mem: 93:LV:[VR4, SR3] cycles 7
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 647
+  backend mem: 93:LV:[VR4, SR3] cycles 6
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 648
+  backend mem: 93:LV:[VR4, SR3] cycles 5
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 649
+  backend mem: 93:LV:[VR4, SR3] cycles 4
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 650
+  backend mem: 93:LV:[VR4, SR3] cycles 3
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 651
+  backend mem: 93:LV:[VR4, SR3] cycles 2
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+===== cycle 652
+  backend mem: 93:LV:[VR4, SR3] cycles 1
+  decode: 94:ADDVV:[VR3, VR3, VR4]
+  fetch: 95:BGT:[SR1, SR7, -7]
+===== cycle 653
+  dispatch vcomp: 94:ADDVV:[VR3, VR3, VR4]
+  decode: 95:BGT:[SR1, SR7, -7]
+  fetch: 96:SV:[VR3, SR6]
+===== cycle 654
+  backend add: 94:ADDVV:[VR3, VR3, VR4] cycles 3
+  dispatch scalar: 95:BGT:[SR1, SR7, -7]
+  decode: 96:SV:[VR3, SR6]
+===== cycle 655
+  backend add: 94:ADDVV:[VR3, VR3, VR4] cycles 2
+  backend scalar: 95:BGT:[SR1, SR7, -7]
+  decode: 96:SV:[VR3, SR6]
+===== cycle 656
+  backend add: 94:ADDVV:[VR3, VR3, VR4] cycles 1
+  decode: 96:SV:[VR3, SR6]
+  fetch: 97:SRL:[SR1, SR1, SR7]
+===== cycle 657
+  dispatch vmem: 96:SV:[VR3, SR6]
+  decode: 97:SRL:[SR1, SR1, SR7]
+  fetch: 98:MTCL:[SR1]
+===== cycle 658
+  backend mem: 96:SV:[VR3, SR6] cycles 11
+  dispatch scalar: 97:SRL:[SR1, SR1, SR7]
+  decode: 98:MTCL:[SR1]
+===== cycle 659
+  backend mem: 96:SV:[VR3, SR6] cycles 10
+  backend scalar: 97:SRL:[SR1, SR1, SR7]
+  decode: 98:MTCL:[SR1]
+  fetch: 99:LV:[VR3, SR6]
+===== cycle 660
+  backend mem: 96:SV:[VR3, SR6] cycles 9
+  dispatch scalar: 98:MTCL:[SR1]
+  decode: 99:LV:[VR3, SR6]
+===== cycle 661
+  backend mem: 96:SV:[VR3, SR6] cycles 8
+  backend scalar: 98:MTCL:[SR1]
+  decode: 99:LV:[VR3, SR6]
+===== cycle 662
+  backend mem: 96:SV:[VR3, SR6] cycles 7
+  decode: 99:LV:[VR3, SR6]
+===== cycle 663
+  backend mem: 96:SV:[VR3, SR6] cycles 6
+  decode: 99:LV:[VR3, SR6]
+===== cycle 664
+  backend mem: 96:SV:[VR3, SR6] cycles 5
+  decode: 99:LV:[VR3, SR6]
+===== cycle 665
+  backend mem: 96:SV:[VR3, SR6] cycles 4
+  decode: 99:LV:[VR3, SR6]
+===== cycle 666
+  backend mem: 96:SV:[VR3, SR6] cycles 3
+  decode: 99:LV:[VR3, SR6]
+===== cycle 667
+  backend mem: 96:SV:[VR3, SR6] cycles 2
+  decode: 99:LV:[VR3, SR6]
+===== cycle 668
+  backend mem: 96:SV:[VR3, SR6] cycles 1
+  decode: 99:LV:[VR3, SR6]
+  fetch: 100:ADD:[SR3, SR6, SR1]
+===== cycle 669
+  dispatch vmem: 99:LV:[VR3, SR6]
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 670
+  backend mem: 99:LV:[VR3, SR6] cycles 11
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 671
+  backend mem: 99:LV:[VR3, SR6] cycles 10
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 672
+  backend mem: 99:LV:[VR3, SR6] cycles 9
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 673
+  backend mem: 99:LV:[VR3, SR6] cycles 8
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 674
+  backend mem: 99:LV:[VR3, SR6] cycles 7
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 675
+  backend mem: 99:LV:[VR3, SR6] cycles 6
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 676
+  backend mem: 99:LV:[VR3, SR6] cycles 5
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 677
+  backend mem: 99:LV:[VR3, SR6] cycles 4
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 678
+  backend mem: 99:LV:[VR3, SR6] cycles 3
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 679
+  backend mem: 99:LV:[VR3, SR6] cycles 2
+  decode: 100:ADD:[SR3, SR6, SR1]
+===== cycle 680
+  backend mem: 99:LV:[VR3, SR6] cycles 1
+  decode: 100:ADD:[SR3, SR6, SR1]
+  fetch: 101:LV:[VR4, SR3]
+===== cycle 681
+  dispatch scalar: 100:ADD:[SR3, SR6, SR1]
+  decode: 101:LV:[VR4, SR3]
+===== cycle 682
+  backend scalar: 100:ADD:[SR3, SR6, SR1]
+  decode: 101:LV:[VR4, SR3]
+  fetch: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 683
+  dispatch vmem: 101:LV:[VR4, SR3]
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 684
+  backend mem: 101:LV:[VR4, SR3] cycles 11
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 685
+  backend mem: 101:LV:[VR4, SR3] cycles 10
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 686
+  backend mem: 101:LV:[VR4, SR3] cycles 9
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 687
+  backend mem: 101:LV:[VR4, SR3] cycles 8
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 688
+  backend mem: 101:LV:[VR4, SR3] cycles 7
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 689
+  backend mem: 101:LV:[VR4, SR3] cycles 6
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 690
+  backend mem: 101:LV:[VR4, SR3] cycles 5
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 691
+  backend mem: 101:LV:[VR4, SR3] cycles 4
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 692
+  backend mem: 101:LV:[VR4, SR3] cycles 3
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 693
+  backend mem: 101:LV:[VR4, SR3] cycles 2
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+===== cycle 694
+  backend mem: 101:LV:[VR4, SR3] cycles 1
+  decode: 102:ADDVV:[VR3, VR3, VR4]
+  fetch: 103:BGT:[SR1, SR7, -7]
+===== cycle 695
+  dispatch vcomp: 102:ADDVV:[VR3, VR3, VR4]
+  decode: 103:BGT:[SR1, SR7, -7]
+  fetch: 104:SV:[VR3, SR6]
+===== cycle 696
+  backend add: 102:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch scalar: 103:BGT:[SR1, SR7, -7]
+  decode: 104:SV:[VR3, SR6]
+===== cycle 697
+  backend add: 102:ADDVV:[VR3, VR3, VR4] cycles 1
+  backend scalar: 103:BGT:[SR1, SR7, -7]
+  decode: 104:SV:[VR3, SR6]
+  fetch: 105:SRL:[SR1, SR1, SR7]
+===== cycle 698
+  dispatch vmem: 104:SV:[VR3, SR6]
+  decode: 105:SRL:[SR1, SR1, SR7]
+  fetch: 106:MTCL:[SR1]
+===== cycle 699
+  backend mem: 104:SV:[VR3, SR6] cycles 11
+  dispatch scalar: 105:SRL:[SR1, SR1, SR7]
+  decode: 106:MTCL:[SR1]
+===== cycle 700
+  backend mem: 104:SV:[VR3, SR6] cycles 10
+  backend scalar: 105:SRL:[SR1, SR1, SR7]
+  decode: 106:MTCL:[SR1]
+  fetch: 107:LV:[VR3, SR6]
+===== cycle 701
+  backend mem: 104:SV:[VR3, SR6] cycles 9
+  dispatch scalar: 106:MTCL:[SR1]
+  decode: 107:LV:[VR3, SR6]
+===== cycle 702
+  backend mem: 104:SV:[VR3, SR6] cycles 8
+  backend scalar: 106:MTCL:[SR1]
+  decode: 107:LV:[VR3, SR6]
+===== cycle 703
+  backend mem: 104:SV:[VR3, SR6] cycles 7
+  decode: 107:LV:[VR3, SR6]
+===== cycle 704
+  backend mem: 104:SV:[VR3, SR6] cycles 6
+  decode: 107:LV:[VR3, SR6]
+===== cycle 705
+  backend mem: 104:SV:[VR3, SR6] cycles 5
+  decode: 107:LV:[VR3, SR6]
+===== cycle 706
+  backend mem: 104:SV:[VR3, SR6] cycles 4
+  decode: 107:LV:[VR3, SR6]
+===== cycle 707
+  backend mem: 104:SV:[VR3, SR6] cycles 3
+  decode: 107:LV:[VR3, SR6]
+===== cycle 708
+  backend mem: 104:SV:[VR3, SR6] cycles 2
+  decode: 107:LV:[VR3, SR6]
+===== cycle 709
+  backend mem: 104:SV:[VR3, SR6] cycles 1
+  decode: 107:LV:[VR3, SR6]
+  fetch: 108:ADD:[SR3, SR6, SR1]
+===== cycle 710
+  dispatch vmem: 107:LV:[VR3, SR6]
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 711
+  backend mem: 107:LV:[VR3, SR6] cycles 11
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 712
+  backend mem: 107:LV:[VR3, SR6] cycles 10
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 713
+  backend mem: 107:LV:[VR3, SR6] cycles 9
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 714
+  backend mem: 107:LV:[VR3, SR6] cycles 8
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 715
+  backend mem: 107:LV:[VR3, SR6] cycles 7
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 716
+  backend mem: 107:LV:[VR3, SR6] cycles 6
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 717
+  backend mem: 107:LV:[VR3, SR6] cycles 5
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 718
+  backend mem: 107:LV:[VR3, SR6] cycles 4
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 719
+  backend mem: 107:LV:[VR3, SR6] cycles 3
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 720
+  backend mem: 107:LV:[VR3, SR6] cycles 2
+  decode: 108:ADD:[SR3, SR6, SR1]
+===== cycle 721
+  backend mem: 107:LV:[VR3, SR6] cycles 1
+  decode: 108:ADD:[SR3, SR6, SR1]
+  fetch: 109:LV:[VR4, SR3]
+===== cycle 722
+  dispatch scalar: 108:ADD:[SR3, SR6, SR1]
+  decode: 109:LV:[VR4, SR3]
+===== cycle 723
+  backend scalar: 108:ADD:[SR3, SR6, SR1]
+  decode: 109:LV:[VR4, SR3]
+  fetch: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 724
+  dispatch vmem: 109:LV:[VR4, SR3]
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 725
+  backend mem: 109:LV:[VR4, SR3] cycles 11
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 726
+  backend mem: 109:LV:[VR4, SR3] cycles 10
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 727
+  backend mem: 109:LV:[VR4, SR3] cycles 9
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 728
+  backend mem: 109:LV:[VR4, SR3] cycles 8
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 729
+  backend mem: 109:LV:[VR4, SR3] cycles 7
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 730
+  backend mem: 109:LV:[VR4, SR3] cycles 6
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 731
+  backend mem: 109:LV:[VR4, SR3] cycles 5
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 732
+  backend mem: 109:LV:[VR4, SR3] cycles 4
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 733
+  backend mem: 109:LV:[VR4, SR3] cycles 3
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 734
+  backend mem: 109:LV:[VR4, SR3] cycles 2
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+===== cycle 735
+  backend mem: 109:LV:[VR4, SR3] cycles 1
+  decode: 110:ADDVV:[VR3, VR3, VR4]
+  fetch: 111:BGT:[SR1, SR7, -7]
+===== cycle 736
+  dispatch vcomp: 110:ADDVV:[VR3, VR3, VR4]
+  decode: 111:BGT:[SR1, SR7, -7]
+  fetch: 112:SV:[VR3, SR6]
+===== cycle 737
+  backend add: 110:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch scalar: 111:BGT:[SR1, SR7, -7]
+  decode: 112:SV:[VR3, SR6]
+===== cycle 738
+  backend add: 110:ADDVV:[VR3, VR3, VR4] cycles 1
+  backend scalar: 111:BGT:[SR1, SR7, -7]
+  decode: 112:SV:[VR3, SR6]
+  fetch: 113:SRL:[SR1, SR1, SR7]
+===== cycle 739
+  dispatch vmem: 112:SV:[VR3, SR6]
+  decode: 113:SRL:[SR1, SR1, SR7]
+  fetch: 114:MTCL:[SR1]
+===== cycle 740
+  backend mem: 112:SV:[VR3, SR6] cycles 11
+  dispatch scalar: 113:SRL:[SR1, SR1, SR7]
+  decode: 114:MTCL:[SR1]
+===== cycle 741
+  backend mem: 112:SV:[VR3, SR6] cycles 10
+  backend scalar: 113:SRL:[SR1, SR1, SR7]
+  decode: 114:MTCL:[SR1]
+  fetch: 115:LV:[VR3, SR6]
+===== cycle 742
+  backend mem: 112:SV:[VR3, SR6] cycles 9
+  dispatch scalar: 114:MTCL:[SR1]
+  decode: 115:LV:[VR3, SR6]
+===== cycle 743
+  backend mem: 112:SV:[VR3, SR6] cycles 8
+  backend scalar: 114:MTCL:[SR1]
+  decode: 115:LV:[VR3, SR6]
+===== cycle 744
+  backend mem: 112:SV:[VR3, SR6] cycles 7
+  decode: 115:LV:[VR3, SR6]
+===== cycle 745
+  backend mem: 112:SV:[VR3, SR6] cycles 6
+  decode: 115:LV:[VR3, SR6]
+===== cycle 746
+  backend mem: 112:SV:[VR3, SR6] cycles 5
+  decode: 115:LV:[VR3, SR6]
+===== cycle 747
+  backend mem: 112:SV:[VR3, SR6] cycles 4
+  decode: 115:LV:[VR3, SR6]
+===== cycle 748
+  backend mem: 112:SV:[VR3, SR6] cycles 3
+  decode: 115:LV:[VR3, SR6]
+===== cycle 749
+  backend mem: 112:SV:[VR3, SR6] cycles 2
+  decode: 115:LV:[VR3, SR6]
+===== cycle 750
+  backend mem: 112:SV:[VR3, SR6] cycles 1
+  decode: 115:LV:[VR3, SR6]
+  fetch: 116:ADD:[SR3, SR6, SR1]
+===== cycle 751
+  dispatch vmem: 115:LV:[VR3, SR6]
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 752
+  backend mem: 115:LV:[VR3, SR6] cycles 11
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 753
+  backend mem: 115:LV:[VR3, SR6] cycles 10
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 754
+  backend mem: 115:LV:[VR3, SR6] cycles 9
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 755
+  backend mem: 115:LV:[VR3, SR6] cycles 8
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 756
+  backend mem: 115:LV:[VR3, SR6] cycles 7
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 757
+  backend mem: 115:LV:[VR3, SR6] cycles 6
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 758
+  backend mem: 115:LV:[VR3, SR6] cycles 5
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 759
+  backend mem: 115:LV:[VR3, SR6] cycles 4
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 760
+  backend mem: 115:LV:[VR3, SR6] cycles 3
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 761
+  backend mem: 115:LV:[VR3, SR6] cycles 2
+  decode: 116:ADD:[SR3, SR6, SR1]
+===== cycle 762
+  backend mem: 115:LV:[VR3, SR6] cycles 1
+  decode: 116:ADD:[SR3, SR6, SR1]
+  fetch: 117:LV:[VR4, SR3]
+===== cycle 763
+  dispatch scalar: 116:ADD:[SR3, SR6, SR1]
+  decode: 117:LV:[VR4, SR3]
+===== cycle 764
+  backend scalar: 116:ADD:[SR3, SR6, SR1]
+  decode: 117:LV:[VR4, SR3]
+  fetch: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 765
+  dispatch vmem: 117:LV:[VR4, SR3]
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 766
+  backend mem: 117:LV:[VR4, SR3] cycles 11
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 767
+  backend mem: 117:LV:[VR4, SR3] cycles 10
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 768
+  backend mem: 117:LV:[VR4, SR3] cycles 9
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 769
+  backend mem: 117:LV:[VR4, SR3] cycles 8
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 770
+  backend mem: 117:LV:[VR4, SR3] cycles 7
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 771
+  backend mem: 117:LV:[VR4, SR3] cycles 6
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 772
+  backend mem: 117:LV:[VR4, SR3] cycles 5
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 773
+  backend mem: 117:LV:[VR4, SR3] cycles 4
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 774
+  backend mem: 117:LV:[VR4, SR3] cycles 3
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 775
+  backend mem: 117:LV:[VR4, SR3] cycles 2
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+===== cycle 776
+  backend mem: 117:LV:[VR4, SR3] cycles 1
+  decode: 118:ADDVV:[VR3, VR3, VR4]
+  fetch: 119:BGT:[SR1, SR7, -7]
+===== cycle 777
+  dispatch vcomp: 118:ADDVV:[VR3, VR3, VR4]
+  decode: 119:BGT:[SR1, SR7, -7]
+  fetch: 120:SV:[VR3, SR6]
+===== cycle 778
+  backend add: 118:ADDVV:[VR3, VR3, VR4] cycles 2
+  dispatch scalar: 119:BGT:[SR1, SR7, -7]
+  decode: 120:SV:[VR3, SR6]
+===== cycle 779
+  backend add: 118:ADDVV:[VR3, VR3, VR4] cycles 1
+  backend scalar: 119:BGT:[SR1, SR7, -7]
+  decode: 120:SV:[VR3, SR6]
+  fetch: 121:HALT:[]
+===== cycle 780
+  dispatch vmem: 120:SV:[VR3, SR6]
+  decode: 121:HALT:[]
+===== cycle 781
+  backend mem: 120:SV:[VR3, SR6] cycles 11
+  dispatch scalar: 121:HALT:[]
+===== cycle 782
+  backend mem: 120:SV:[VR3, SR6] cycles 10
+  backend scalar: 121:HALT:[]
+===== cycle 783
+  backend mem: 120:SV:[VR3, SR6] cycles 9
+===== cycle 784
+  backend mem: 120:SV:[VR3, SR6] cycles 8
+===== cycle 785
+  backend mem: 120:SV:[VR3, SR6] cycles 7
+===== cycle 786
+  backend mem: 120:SV:[VR3, SR6] cycles 6
+===== cycle 787
+  backend mem: 120:SV:[VR3, SR6] cycles 5
+===== cycle 788
+  backend mem: 120:SV:[VR3, SR6] cycles 4
+===== cycle 789
+  backend mem: 120:SV:[VR3, SR6] cycles 3
+===== cycle 790
+  backend mem: 120:SV:[VR3, SR6] cycles 2
+===== cycle 791
+  backend mem: 120:SV:[VR3, SR6] cycles 1

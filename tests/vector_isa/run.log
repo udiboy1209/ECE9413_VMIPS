@@ -1,0 +1,2910 @@
+IO Directory: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/vector_isa
+Config - Parameters loaded from file: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/vector_isa/Config.txt
+Config parameters: {'dataQueueDepth': 4, 'computeQueueDepth': 4, 'vdmNumBanks': 16, 'vlsPipelineDepth': 11, 'numLanes': 4, 'pipelineDepthMul': 12, 'pipelineDepthAdd': 2, 'pipelineDepthDiv': 8}
+ITrace - Instruction trace loaded from file: /home/udiboy/projects/CompArch/VMIPS_simulator/tests/vector_isa/trace.txt
+===== cycle 0
+  fetch: 0:CVM:[]
+===== cycle 1
+  decode: 0:CVM:[]
+  fetch: 1:POP:[SR1]
+===== cycle 2
+  dispatch scalar: 0:CVM:[]
+  decode: 1:POP:[SR1]
+  fetch: 2:MTCL:[SR1]
+===== cycle 3
+  backend scalar: 0:CVM:[]
+  dispatch scalar: 1:POP:[SR1]
+  decode: 2:MTCL:[SR1]
+===== cycle 4
+  backend scalar: 1:POP:[SR1]
+  decode: 2:MTCL:[SR1]
+  fetch: 3:LS:[SR1, SR0, 0]
+===== cycle 5
+  dispatch scalar: 2:MTCL:[SR1]
+  decode: 3:LS:[SR1, SR0, 0]
+===== cycle 6
+  backend scalar: 2:MTCL:[SR1]
+  decode: 3:LS:[SR1, SR0, 0]
+  fetch: 4:LS:[SR2, SR0, 1]
+===== cycle 7
+  dispatch scalar: 3:LS:[SR1, SR0, 0]
+  decode: 4:LS:[SR2, SR0, 1]
+===== cycle 8
+  backend scalar: 3:LS:[SR1, SR0, 0]
+  decode: 4:LS:[SR2, SR0, 1]
+  fetch: 5:LS:[SR3, SR0, 2]
+===== cycle 9
+  dispatch scalar: 4:LS:[SR2, SR0, 1]
+  decode: 5:LS:[SR3, SR0, 2]
+===== cycle 10
+  backend scalar: 4:LS:[SR2, SR0, 1]
+  decode: 5:LS:[SR3, SR0, 2]
+  fetch: 6:LS:[SR4, SR0, 3]
+===== cycle 11
+  dispatch scalar: 5:LS:[SR3, SR0, 2]
+  decode: 6:LS:[SR4, SR0, 3]
+===== cycle 12
+  backend scalar: 5:LS:[SR3, SR0, 2]
+  decode: 6:LS:[SR4, SR0, 3]
+  fetch: 7:LS:[SR6, SR0, 4]
+===== cycle 13
+  dispatch scalar: 6:LS:[SR4, SR0, 3]
+  decode: 7:LS:[SR6, SR0, 4]
+===== cycle 14
+  backend scalar: 6:LS:[SR4, SR0, 3]
+  decode: 7:LS:[SR6, SR0, 4]
+  fetch: 8:LV:[VR1, SR1]
+===== cycle 15
+  dispatch scalar: 7:LS:[SR6, SR0, 4]
+  decode: 8:LV:[VR1, SR1]
+  fetch: 9:LV:[VR2, SR2]
+===== cycle 16
+  backend scalar: 7:LS:[SR6, SR0, 4]
+  dispatch vmem: 8:LV:[VR1, SR1]
+  decode: 9:LV:[VR2, SR2]
+  fetch: 10:LV:[VR3, SR3]
+===== cycle 17
+  backend mem: 8:LV:[VR1, SR1] cycles 14
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 10:LV:[VR3, SR3]
+  fetch: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 18
+  backend mem: 8:LV:[VR1, SR1] cycles 13
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 19
+  backend mem: 8:LV:[VR1, SR1] cycles 12
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 20
+  backend mem: 8:LV:[VR1, SR1] cycles 11
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 21
+  backend mem: 8:LV:[VR1, SR1] cycles 10
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 22
+  backend mem: 8:LV:[VR1, SR1] cycles 9
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 23
+  backend mem: 8:LV:[VR1, SR1] cycles 8
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 24
+  backend mem: 8:LV:[VR1, SR1] cycles 7
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 25
+  backend mem: 8:LV:[VR1, SR1] cycles 6
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 26
+  backend mem: 8:LV:[VR1, SR1] cycles 5
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 27
+  backend mem: 8:LV:[VR1, SR1] cycles 4
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 28
+  backend mem: 8:LV:[VR1, SR1] cycles 3
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 29
+  backend mem: 8:LV:[VR1, SR1] cycles 2
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 30
+  backend mem: 8:LV:[VR1, SR1] cycles 1
+  dispatch vmem: 9:LV:[VR2, SR2]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 31
+  backend mem: 9:LV:[VR2, SR2] cycles 14
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 32
+  backend mem: 9:LV:[VR2, SR2] cycles 13
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 33
+  backend mem: 9:LV:[VR2, SR2] cycles 12
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 34
+  backend mem: 9:LV:[VR2, SR2] cycles 11
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 35
+  backend mem: 9:LV:[VR2, SR2] cycles 10
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 36
+  backend mem: 9:LV:[VR2, SR2] cycles 9
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 37
+  backend mem: 9:LV:[VR2, SR2] cycles 8
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 38
+  backend mem: 9:LV:[VR2, SR2] cycles 7
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 39
+  backend mem: 9:LV:[VR2, SR2] cycles 6
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 40
+  backend mem: 9:LV:[VR2, SR2] cycles 5
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 41
+  backend mem: 9:LV:[VR2, SR2] cycles 4
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 42
+  backend mem: 9:LV:[VR2, SR2] cycles 3
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 43
+  backend mem: 9:LV:[VR2, SR2] cycles 2
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 44
+  backend mem: 9:LV:[VR2, SR2] cycles 1
+  dispatch vmem: 10:LV:[VR3, SR3]
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 45
+  backend mem: 10:LV:[VR3, SR3] cycles 14
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 46
+  backend mem: 10:LV:[VR3, SR3] cycles 13
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 47
+  backend mem: 10:LV:[VR3, SR3] cycles 12
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 48
+  backend mem: 10:LV:[VR3, SR3] cycles 11
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 49
+  backend mem: 10:LV:[VR3, SR3] cycles 10
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 50
+  backend mem: 10:LV:[VR3, SR3] cycles 9
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 51
+  backend mem: 10:LV:[VR3, SR3] cycles 8
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 52
+  backend mem: 10:LV:[VR3, SR3] cycles 7
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 53
+  backend mem: 10:LV:[VR3, SR3] cycles 6
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 54
+  backend mem: 10:LV:[VR3, SR3] cycles 5
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 55
+  backend mem: 10:LV:[VR3, SR3] cycles 4
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 56
+  backend mem: 10:LV:[VR3, SR3] cycles 3
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 57
+  backend mem: 10:LV:[VR3, SR3] cycles 2
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+===== cycle 58
+  backend mem: 10:LV:[VR3, SR3] cycles 1
+  decode: 11:ADDVV:[VR5, VR2, VR3]
+  fetch: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 59
+  dispatch vcomp: 11:ADDVV:[VR5, VR2, VR3]
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 60
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 17
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 61
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 16
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 62
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 15
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 63
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 14
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 64
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 13
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 65
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 12
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 66
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 11
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 67
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 10
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 68
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 9
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 69
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 8
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 70
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 7
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 71
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 6
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 72
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 5
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 73
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 4
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 74
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 3
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 75
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 2
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+===== cycle 76
+  backend add: 11:ADDVV:[VR5, VR2, VR3] cycles 1
+  decode: 12:SUBVV:[VR5, VR2, VR3]
+  fetch: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 77
+  dispatch vcomp: 12:SUBVV:[VR5, VR2, VR3]
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 78
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 17
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 79
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 16
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 80
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 15
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 81
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 14
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 82
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 13
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 83
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 12
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 84
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 11
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 85
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 10
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 86
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 9
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 87
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 8
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 88
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 7
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 89
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 6
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 90
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 5
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 91
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 4
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 92
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 3
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 93
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 2
+  decode: 13:MULVV:[VR5, VR2, VR3]
+===== cycle 94
+  backend add: 12:SUBVV:[VR5, VR2, VR3] cycles 1
+  decode: 13:MULVV:[VR5, VR2, VR3]
+  fetch: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 95
+  dispatch vcomp: 13:MULVV:[VR5, VR2, VR3]
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 96
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 27
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 97
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 26
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 98
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 25
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 99
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 24
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 100
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 23
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 101
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 22
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 102
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 21
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 103
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 20
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 104
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 19
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 105
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 18
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 106
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 17
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 107
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 16
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 108
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 15
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 109
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 14
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 110
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 13
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 111
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 12
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 112
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 11
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 113
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 10
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 114
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 9
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 115
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 8
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 116
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 7
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 117
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 6
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 118
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 5
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 119
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 4
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 120
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 3
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 121
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 2
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+===== cycle 122
+  backend mul: 13:MULVV:[VR5, VR2, VR3] cycles 1
+  decode: 14:DIVVV:[VR5, VR2, VR3]
+  fetch: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 123
+  dispatch vcomp: 14:DIVVV:[VR5, VR2, VR3]
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 124
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 23
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 125
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 22
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 126
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 21
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 127
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 20
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 128
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 19
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 129
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 18
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 130
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 17
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 131
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 16
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 132
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 15
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 133
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 14
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 134
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 13
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 135
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 12
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 136
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 11
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 137
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 10
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 138
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 9
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 139
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 8
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 140
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 7
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 141
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 6
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 142
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 5
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 143
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 4
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 144
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 3
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 145
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 2
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+===== cycle 146
+  backend div: 14:DIVVV:[VR5, VR2, VR3] cycles 1
+  decode: 15:ADDVS:[VR5, VR2, SR2]
+  fetch: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 147
+  dispatch vcomp: 15:ADDVS:[VR5, VR2, SR2]
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 148
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 17
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 149
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 16
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 150
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 15
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 151
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 14
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 152
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 13
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 153
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 12
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 154
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 11
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 155
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 10
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 156
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 9
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 157
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 8
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 158
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 7
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 159
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 6
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 160
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 5
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 161
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 4
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 162
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 3
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 163
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 2
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+===== cycle 164
+  backend add: 15:ADDVS:[VR5, VR2, SR2] cycles 1
+  decode: 16:SUBVS:[VR5, VR2, SR2]
+  fetch: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 165
+  dispatch vcomp: 16:SUBVS:[VR5, VR2, SR2]
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 166
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 17
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 167
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 16
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 168
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 15
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 169
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 14
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 170
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 13
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 171
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 12
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 172
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 11
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 173
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 10
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 174
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 9
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 175
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 8
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 176
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 7
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 177
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 6
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 178
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 5
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 179
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 4
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 180
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 3
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 181
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 2
+  decode: 17:MULVS:[VR5, VR2, SR2]
+===== cycle 182
+  backend add: 16:SUBVS:[VR5, VR2, SR2] cycles 1
+  decode: 17:MULVS:[VR5, VR2, SR2]
+  fetch: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 183
+  dispatch vcomp: 17:MULVS:[VR5, VR2, SR2]
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 184
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 27
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 185
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 26
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 186
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 25
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 187
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 24
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 188
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 23
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 189
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 22
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 190
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 21
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 191
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 20
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 192
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 19
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 193
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 18
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 194
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 17
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 195
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 16
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 196
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 15
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 197
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 14
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 198
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 13
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 199
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 12
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 200
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 11
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 201
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 10
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 202
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 9
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 203
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 8
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 204
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 7
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 205
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 6
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 206
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 5
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 207
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 4
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 208
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 3
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 209
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 2
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+===== cycle 210
+  backend mul: 17:MULVS:[VR5, VR2, SR2] cycles 1
+  decode: 18:DIVVS:[VR5, VR2, SR2]
+  fetch: 19:SEQVV:[VR1, VR2]
+===== cycle 211
+  dispatch vcomp: 18:DIVVS:[VR5, VR2, SR2]
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 212
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 23
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 213
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 22
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 214
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 21
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 215
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 20
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 216
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 19
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 217
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 18
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 218
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 17
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 219
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 16
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 220
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 15
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 221
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 14
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 222
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 13
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 223
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 12
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 224
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 11
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 225
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 10
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 226
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 9
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 227
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 8
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 228
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 7
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 229
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 6
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 230
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 5
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 231
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 4
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 232
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 3
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 233
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 2
+  decode: 19:SEQVV:[VR1, VR2]
+===== cycle 234
+  backend div: 18:DIVVS:[VR5, VR2, SR2] cycles 1
+  decode: 19:SEQVV:[VR1, VR2]
+  fetch: 20:ADDVS:[VR0, VR0, SR6]
+===== cycle 235
+  dispatch vcomp: 19:SEQVV:[VR1, VR2]
+  decode: 20:ADDVS:[VR0, VR0, SR6]
+  fetch: 21:SNEVV:[VR1, VR3]
+===== cycle 236
+  backend add: 19:SEQVV:[VR1, VR2] cycles 17
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 237
+  backend add: 19:SEQVV:[VR1, VR2] cycles 16
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 238
+  backend add: 19:SEQVV:[VR1, VR2] cycles 15
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 239
+  backend add: 19:SEQVV:[VR1, VR2] cycles 14
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 240
+  backend add: 19:SEQVV:[VR1, VR2] cycles 13
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 241
+  backend add: 19:SEQVV:[VR1, VR2] cycles 12
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 242
+  backend add: 19:SEQVV:[VR1, VR2] cycles 11
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 243
+  backend add: 19:SEQVV:[VR1, VR2] cycles 10
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 244
+  backend add: 19:SEQVV:[VR1, VR2] cycles 9
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 245
+  backend add: 19:SEQVV:[VR1, VR2] cycles 8
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 246
+  backend add: 19:SEQVV:[VR1, VR2] cycles 7
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 247
+  backend add: 19:SEQVV:[VR1, VR2] cycles 6
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 248
+  backend add: 19:SEQVV:[VR1, VR2] cycles 5
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 249
+  backend add: 19:SEQVV:[VR1, VR2] cycles 4
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 250
+  backend add: 19:SEQVV:[VR1, VR2] cycles 3
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 251
+  backend add: 19:SEQVV:[VR1, VR2] cycles 2
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+===== cycle 252
+  backend add: 19:SEQVV:[VR1, VR2] cycles 1
+  dispatch vcomp: 20:ADDVS:[VR0, VR0, SR6]
+  decode: 21:SNEVV:[VR1, VR3]
+  fetch: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 253
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 254
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 255
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 256
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 257
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 258
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 259
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 260
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 261
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 262
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 263
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 264
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 265
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 266
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 267
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 268
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+===== cycle 269
+  backend add: 20:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 21:SNEVV:[VR1, VR3]
+  decode: 22:ADDVS:[VR0, VR0, SR6]
+  fetch: 23:SGTVV:[VR1, VR2]
+===== cycle 270
+  backend add: 21:SNEVV:[VR1, VR3] cycles 17
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 271
+  backend add: 21:SNEVV:[VR1, VR3] cycles 16
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 272
+  backend add: 21:SNEVV:[VR1, VR3] cycles 15
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 273
+  backend add: 21:SNEVV:[VR1, VR3] cycles 14
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 274
+  backend add: 21:SNEVV:[VR1, VR3] cycles 13
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 275
+  backend add: 21:SNEVV:[VR1, VR3] cycles 12
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 276
+  backend add: 21:SNEVV:[VR1, VR3] cycles 11
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 277
+  backend add: 21:SNEVV:[VR1, VR3] cycles 10
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 278
+  backend add: 21:SNEVV:[VR1, VR3] cycles 9
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 279
+  backend add: 21:SNEVV:[VR1, VR3] cycles 8
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 280
+  backend add: 21:SNEVV:[VR1, VR3] cycles 7
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 281
+  backend add: 21:SNEVV:[VR1, VR3] cycles 6
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 282
+  backend add: 21:SNEVV:[VR1, VR3] cycles 5
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 283
+  backend add: 21:SNEVV:[VR1, VR3] cycles 4
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 284
+  backend add: 21:SNEVV:[VR1, VR3] cycles 3
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 285
+  backend add: 21:SNEVV:[VR1, VR3] cycles 2
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+===== cycle 286
+  backend add: 21:SNEVV:[VR1, VR3] cycles 1
+  dispatch vcomp: 22:ADDVS:[VR0, VR0, SR6]
+  decode: 23:SGTVV:[VR1, VR2]
+  fetch: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 287
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 288
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 289
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 290
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 291
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 292
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 293
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 294
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 295
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 296
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 297
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 298
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 299
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 300
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 301
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 302
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+===== cycle 303
+  backend add: 22:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 23:SGTVV:[VR1, VR2]
+  decode: 24:ADDVS:[VR0, VR0, SR6]
+  fetch: 25:SLTVV:[VR1, VR2]
+===== cycle 304
+  backend add: 23:SGTVV:[VR1, VR2] cycles 17
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 305
+  backend add: 23:SGTVV:[VR1, VR2] cycles 16
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 306
+  backend add: 23:SGTVV:[VR1, VR2] cycles 15
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 307
+  backend add: 23:SGTVV:[VR1, VR2] cycles 14
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 308
+  backend add: 23:SGTVV:[VR1, VR2] cycles 13
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 309
+  backend add: 23:SGTVV:[VR1, VR2] cycles 12
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 310
+  backend add: 23:SGTVV:[VR1, VR2] cycles 11
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 311
+  backend add: 23:SGTVV:[VR1, VR2] cycles 10
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 312
+  backend add: 23:SGTVV:[VR1, VR2] cycles 9
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 313
+  backend add: 23:SGTVV:[VR1, VR2] cycles 8
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 314
+  backend add: 23:SGTVV:[VR1, VR2] cycles 7
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 315
+  backend add: 23:SGTVV:[VR1, VR2] cycles 6
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 316
+  backend add: 23:SGTVV:[VR1, VR2] cycles 5
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 317
+  backend add: 23:SGTVV:[VR1, VR2] cycles 4
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 318
+  backend add: 23:SGTVV:[VR1, VR2] cycles 3
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 319
+  backend add: 23:SGTVV:[VR1, VR2] cycles 2
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+===== cycle 320
+  backend add: 23:SGTVV:[VR1, VR2] cycles 1
+  dispatch vcomp: 24:ADDVS:[VR0, VR0, SR6]
+  decode: 25:SLTVV:[VR1, VR2]
+  fetch: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 321
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 322
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 323
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 324
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 325
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 326
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 327
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 328
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 329
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 330
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 331
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 332
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 333
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 334
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 335
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 336
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+===== cycle 337
+  backend add: 24:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 25:SLTVV:[VR1, VR2]
+  decode: 26:ADDVS:[VR0, VR0, SR6]
+  fetch: 27:SGEVV:[VR1, VR3]
+===== cycle 338
+  backend add: 25:SLTVV:[VR1, VR2] cycles 17
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 339
+  backend add: 25:SLTVV:[VR1, VR2] cycles 16
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 340
+  backend add: 25:SLTVV:[VR1, VR2] cycles 15
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 341
+  backend add: 25:SLTVV:[VR1, VR2] cycles 14
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 342
+  backend add: 25:SLTVV:[VR1, VR2] cycles 13
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 343
+  backend add: 25:SLTVV:[VR1, VR2] cycles 12
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 344
+  backend add: 25:SLTVV:[VR1, VR2] cycles 11
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 345
+  backend add: 25:SLTVV:[VR1, VR2] cycles 10
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 346
+  backend add: 25:SLTVV:[VR1, VR2] cycles 9
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 347
+  backend add: 25:SLTVV:[VR1, VR2] cycles 8
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 348
+  backend add: 25:SLTVV:[VR1, VR2] cycles 7
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 349
+  backend add: 25:SLTVV:[VR1, VR2] cycles 6
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 350
+  backend add: 25:SLTVV:[VR1, VR2] cycles 5
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 351
+  backend add: 25:SLTVV:[VR1, VR2] cycles 4
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 352
+  backend add: 25:SLTVV:[VR1, VR2] cycles 3
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 353
+  backend add: 25:SLTVV:[VR1, VR2] cycles 2
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+===== cycle 354
+  backend add: 25:SLTVV:[VR1, VR2] cycles 1
+  dispatch vcomp: 26:ADDVS:[VR0, VR0, SR6]
+  decode: 27:SGEVV:[VR1, VR3]
+  fetch: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 355
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 356
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 357
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 358
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 359
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 360
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 361
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 362
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 363
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 364
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 365
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 366
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 367
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 368
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 369
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 370
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+===== cycle 371
+  backend add: 26:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 27:SGEVV:[VR1, VR3]
+  decode: 28:ADDVS:[VR0, VR0, SR6]
+  fetch: 29:SLEVV:[VR1, VR3]
+===== cycle 372
+  backend add: 27:SGEVV:[VR1, VR3] cycles 17
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 373
+  backend add: 27:SGEVV:[VR1, VR3] cycles 16
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 374
+  backend add: 27:SGEVV:[VR1, VR3] cycles 15
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 375
+  backend add: 27:SGEVV:[VR1, VR3] cycles 14
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 376
+  backend add: 27:SGEVV:[VR1, VR3] cycles 13
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 377
+  backend add: 27:SGEVV:[VR1, VR3] cycles 12
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 378
+  backend add: 27:SGEVV:[VR1, VR3] cycles 11
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 379
+  backend add: 27:SGEVV:[VR1, VR3] cycles 10
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 380
+  backend add: 27:SGEVV:[VR1, VR3] cycles 9
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 381
+  backend add: 27:SGEVV:[VR1, VR3] cycles 8
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 382
+  backend add: 27:SGEVV:[VR1, VR3] cycles 7
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 383
+  backend add: 27:SGEVV:[VR1, VR3] cycles 6
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 384
+  backend add: 27:SGEVV:[VR1, VR3] cycles 5
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 385
+  backend add: 27:SGEVV:[VR1, VR3] cycles 4
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 386
+  backend add: 27:SGEVV:[VR1, VR3] cycles 3
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 387
+  backend add: 27:SGEVV:[VR1, VR3] cycles 2
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+===== cycle 388
+  backend add: 27:SGEVV:[VR1, VR3] cycles 1
+  dispatch vcomp: 28:ADDVS:[VR0, VR0, SR6]
+  decode: 29:SLEVV:[VR1, VR3]
+  fetch: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 389
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 390
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 391
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 392
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 393
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 394
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 395
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 396
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 397
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 398
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 399
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 400
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 401
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 402
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 403
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 404
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+===== cycle 405
+  backend add: 28:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 29:SLEVV:[VR1, VR3]
+  decode: 30:ADDVS:[VR0, VR0, SR6]
+  fetch: 31:SEQVS:[VR1, SR1]
+===== cycle 406
+  backend add: 29:SLEVV:[VR1, VR3] cycles 17
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 407
+  backend add: 29:SLEVV:[VR1, VR3] cycles 16
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 408
+  backend add: 29:SLEVV:[VR1, VR3] cycles 15
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 409
+  backend add: 29:SLEVV:[VR1, VR3] cycles 14
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 410
+  backend add: 29:SLEVV:[VR1, VR3] cycles 13
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 411
+  backend add: 29:SLEVV:[VR1, VR3] cycles 12
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 412
+  backend add: 29:SLEVV:[VR1, VR3] cycles 11
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 413
+  backend add: 29:SLEVV:[VR1, VR3] cycles 10
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 414
+  backend add: 29:SLEVV:[VR1, VR3] cycles 9
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 415
+  backend add: 29:SLEVV:[VR1, VR3] cycles 8
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 416
+  backend add: 29:SLEVV:[VR1, VR3] cycles 7
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 417
+  backend add: 29:SLEVV:[VR1, VR3] cycles 6
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 418
+  backend add: 29:SLEVV:[VR1, VR3] cycles 5
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 419
+  backend add: 29:SLEVV:[VR1, VR3] cycles 4
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 420
+  backend add: 29:SLEVV:[VR1, VR3] cycles 3
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 421
+  backend add: 29:SLEVV:[VR1, VR3] cycles 2
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+===== cycle 422
+  backend add: 29:SLEVV:[VR1, VR3] cycles 1
+  dispatch vcomp: 30:ADDVS:[VR0, VR0, SR6]
+  decode: 31:SEQVS:[VR1, SR1]
+  fetch: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 423
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 424
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 425
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 426
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 427
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 428
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 429
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 430
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 431
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 432
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 433
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 434
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 435
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 436
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 437
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 438
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+===== cycle 439
+  backend add: 30:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 31:SEQVS:[VR1, SR1]
+  decode: 32:ADDVS:[VR0, VR0, SR6]
+  fetch: 33:SNEVS:[VR1, SR1]
+===== cycle 440
+  backend add: 31:SEQVS:[VR1, SR1] cycles 17
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 441
+  backend add: 31:SEQVS:[VR1, SR1] cycles 16
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 442
+  backend add: 31:SEQVS:[VR1, SR1] cycles 15
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 443
+  backend add: 31:SEQVS:[VR1, SR1] cycles 14
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 444
+  backend add: 31:SEQVS:[VR1, SR1] cycles 13
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 445
+  backend add: 31:SEQVS:[VR1, SR1] cycles 12
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 446
+  backend add: 31:SEQVS:[VR1, SR1] cycles 11
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 447
+  backend add: 31:SEQVS:[VR1, SR1] cycles 10
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 448
+  backend add: 31:SEQVS:[VR1, SR1] cycles 9
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 449
+  backend add: 31:SEQVS:[VR1, SR1] cycles 8
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 450
+  backend add: 31:SEQVS:[VR1, SR1] cycles 7
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 451
+  backend add: 31:SEQVS:[VR1, SR1] cycles 6
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 452
+  backend add: 31:SEQVS:[VR1, SR1] cycles 5
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 453
+  backend add: 31:SEQVS:[VR1, SR1] cycles 4
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 454
+  backend add: 31:SEQVS:[VR1, SR1] cycles 3
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 455
+  backend add: 31:SEQVS:[VR1, SR1] cycles 2
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+===== cycle 456
+  backend add: 31:SEQVS:[VR1, SR1] cycles 1
+  dispatch vcomp: 32:ADDVS:[VR0, VR0, SR6]
+  decode: 33:SNEVS:[VR1, SR1]
+  fetch: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 457
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 458
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 459
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 460
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 461
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 462
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 463
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 464
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 465
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 466
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 467
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 468
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 469
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 470
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 471
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 472
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+===== cycle 473
+  backend add: 32:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 33:SNEVS:[VR1, SR1]
+  decode: 34:ADDVS:[VR0, VR0, SR6]
+  fetch: 35:SGTVS:[VR1, SR2]
+===== cycle 474
+  backend add: 33:SNEVS:[VR1, SR1] cycles 17
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 475
+  backend add: 33:SNEVS:[VR1, SR1] cycles 16
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 476
+  backend add: 33:SNEVS:[VR1, SR1] cycles 15
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 477
+  backend add: 33:SNEVS:[VR1, SR1] cycles 14
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 478
+  backend add: 33:SNEVS:[VR1, SR1] cycles 13
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 479
+  backend add: 33:SNEVS:[VR1, SR1] cycles 12
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 480
+  backend add: 33:SNEVS:[VR1, SR1] cycles 11
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 481
+  backend add: 33:SNEVS:[VR1, SR1] cycles 10
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 482
+  backend add: 33:SNEVS:[VR1, SR1] cycles 9
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 483
+  backend add: 33:SNEVS:[VR1, SR1] cycles 8
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 484
+  backend add: 33:SNEVS:[VR1, SR1] cycles 7
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 485
+  backend add: 33:SNEVS:[VR1, SR1] cycles 6
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 486
+  backend add: 33:SNEVS:[VR1, SR1] cycles 5
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 487
+  backend add: 33:SNEVS:[VR1, SR1] cycles 4
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 488
+  backend add: 33:SNEVS:[VR1, SR1] cycles 3
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 489
+  backend add: 33:SNEVS:[VR1, SR1] cycles 2
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+===== cycle 490
+  backend add: 33:SNEVS:[VR1, SR1] cycles 1
+  dispatch vcomp: 34:ADDVS:[VR0, VR0, SR6]
+  decode: 35:SGTVS:[VR1, SR2]
+  fetch: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 491
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 492
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 493
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 494
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 495
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 496
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 497
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 498
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 499
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 500
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 501
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 502
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 503
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 504
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 505
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 506
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+===== cycle 507
+  backend add: 34:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 35:SGTVS:[VR1, SR2]
+  decode: 36:ADDVS:[VR0, VR0, SR6]
+  fetch: 37:SLTVS:[VR1, SR2]
+===== cycle 508
+  backend add: 35:SGTVS:[VR1, SR2] cycles 17
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 509
+  backend add: 35:SGTVS:[VR1, SR2] cycles 16
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 510
+  backend add: 35:SGTVS:[VR1, SR2] cycles 15
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 511
+  backend add: 35:SGTVS:[VR1, SR2] cycles 14
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 512
+  backend add: 35:SGTVS:[VR1, SR2] cycles 13
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 513
+  backend add: 35:SGTVS:[VR1, SR2] cycles 12
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 514
+  backend add: 35:SGTVS:[VR1, SR2] cycles 11
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 515
+  backend add: 35:SGTVS:[VR1, SR2] cycles 10
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 516
+  backend add: 35:SGTVS:[VR1, SR2] cycles 9
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 517
+  backend add: 35:SGTVS:[VR1, SR2] cycles 8
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 518
+  backend add: 35:SGTVS:[VR1, SR2] cycles 7
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 519
+  backend add: 35:SGTVS:[VR1, SR2] cycles 6
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 520
+  backend add: 35:SGTVS:[VR1, SR2] cycles 5
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 521
+  backend add: 35:SGTVS:[VR1, SR2] cycles 4
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 522
+  backend add: 35:SGTVS:[VR1, SR2] cycles 3
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 523
+  backend add: 35:SGTVS:[VR1, SR2] cycles 2
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+===== cycle 524
+  backend add: 35:SGTVS:[VR1, SR2] cycles 1
+  dispatch vcomp: 36:ADDVS:[VR0, VR0, SR6]
+  decode: 37:SLTVS:[VR1, SR2]
+  fetch: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 525
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 526
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 527
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 528
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 529
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 530
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 531
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 532
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 533
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 534
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 535
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 536
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 537
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 538
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 539
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 540
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+===== cycle 541
+  backend add: 36:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 37:SLTVS:[VR1, SR2]
+  decode: 38:ADDVS:[VR0, VR0, SR6]
+  fetch: 39:SGEVS:[VR1, SR3]
+===== cycle 542
+  backend add: 37:SLTVS:[VR1, SR2] cycles 17
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 543
+  backend add: 37:SLTVS:[VR1, SR2] cycles 16
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 544
+  backend add: 37:SLTVS:[VR1, SR2] cycles 15
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 545
+  backend add: 37:SLTVS:[VR1, SR2] cycles 14
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 546
+  backend add: 37:SLTVS:[VR1, SR2] cycles 13
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 547
+  backend add: 37:SLTVS:[VR1, SR2] cycles 12
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 548
+  backend add: 37:SLTVS:[VR1, SR2] cycles 11
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 549
+  backend add: 37:SLTVS:[VR1, SR2] cycles 10
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 550
+  backend add: 37:SLTVS:[VR1, SR2] cycles 9
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 551
+  backend add: 37:SLTVS:[VR1, SR2] cycles 8
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 552
+  backend add: 37:SLTVS:[VR1, SR2] cycles 7
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 553
+  backend add: 37:SLTVS:[VR1, SR2] cycles 6
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 554
+  backend add: 37:SLTVS:[VR1, SR2] cycles 5
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 555
+  backend add: 37:SLTVS:[VR1, SR2] cycles 4
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 556
+  backend add: 37:SLTVS:[VR1, SR2] cycles 3
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 557
+  backend add: 37:SLTVS:[VR1, SR2] cycles 2
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+===== cycle 558
+  backend add: 37:SLTVS:[VR1, SR2] cycles 1
+  dispatch vcomp: 38:ADDVS:[VR0, VR0, SR6]
+  decode: 39:SGEVS:[VR1, SR3]
+  fetch: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 559
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 560
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 561
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 562
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 563
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 564
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 565
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 566
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 567
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 568
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 569
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 570
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 571
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 572
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 573
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 574
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+===== cycle 575
+  backend add: 38:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 39:SGEVS:[VR1, SR3]
+  decode: 40:ADDVS:[VR0, VR0, SR6]
+  fetch: 41:SLEVS:[VR1, SR3]
+===== cycle 576
+  backend add: 39:SGEVS:[VR1, SR3] cycles 17
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 577
+  backend add: 39:SGEVS:[VR1, SR3] cycles 16
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 578
+  backend add: 39:SGEVS:[VR1, SR3] cycles 15
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 579
+  backend add: 39:SGEVS:[VR1, SR3] cycles 14
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 580
+  backend add: 39:SGEVS:[VR1, SR3] cycles 13
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 581
+  backend add: 39:SGEVS:[VR1, SR3] cycles 12
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 582
+  backend add: 39:SGEVS:[VR1, SR3] cycles 11
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 583
+  backend add: 39:SGEVS:[VR1, SR3] cycles 10
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 584
+  backend add: 39:SGEVS:[VR1, SR3] cycles 9
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 585
+  backend add: 39:SGEVS:[VR1, SR3] cycles 8
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 586
+  backend add: 39:SGEVS:[VR1, SR3] cycles 7
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 587
+  backend add: 39:SGEVS:[VR1, SR3] cycles 6
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 588
+  backend add: 39:SGEVS:[VR1, SR3] cycles 5
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 589
+  backend add: 39:SGEVS:[VR1, SR3] cycles 4
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 590
+  backend add: 39:SGEVS:[VR1, SR3] cycles 3
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 591
+  backend add: 39:SGEVS:[VR1, SR3] cycles 2
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+===== cycle 592
+  backend add: 39:SGEVS:[VR1, SR3] cycles 1
+  dispatch vcomp: 40:ADDVS:[VR0, VR0, SR6]
+  decode: 41:SLEVS:[VR1, SR3]
+  fetch: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 593
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 17
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 594
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 16
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 595
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 15
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 596
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 14
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 597
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 13
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 598
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 12
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 599
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 11
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 600
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 10
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 601
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 9
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 602
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 8
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 603
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 7
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 604
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 6
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 605
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 5
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 606
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 4
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 607
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 3
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 608
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 2
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+===== cycle 609
+  backend add: 40:ADDVS:[VR0, VR0, SR6] cycles 1
+  dispatch vcomp: 41:SLEVS:[VR1, SR3]
+  decode: 42:ADDVS:[VR0, VR0, SR6]
+  fetch: 43:CVM:[]
+===== cycle 610
+  backend add: 41:SLEVS:[VR1, SR3] cycles 17
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 43:CVM:[]
+  fetch: 44:SLL:[SR6, SR6, SR6]
+===== cycle 611
+  backend add: 41:SLEVS:[VR1, SR3] cycles 16
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  dispatch scalar: 43:CVM:[]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 612
+  backend add: 41:SLEVS:[VR1, SR3] cycles 15
+  backend scalar: 43:CVM:[]
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 613
+  backend add: 41:SLEVS:[VR1, SR3] cycles 14
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 614
+  backend add: 41:SLEVS:[VR1, SR3] cycles 13
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 615
+  backend add: 41:SLEVS:[VR1, SR3] cycles 12
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 616
+  backend add: 41:SLEVS:[VR1, SR3] cycles 11
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 617
+  backend add: 41:SLEVS:[VR1, SR3] cycles 10
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 618
+  backend add: 41:SLEVS:[VR1, SR3] cycles 9
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 619
+  backend add: 41:SLEVS:[VR1, SR3] cycles 8
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 620
+  backend add: 41:SLEVS:[VR1, SR3] cycles 7
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 621
+  backend add: 41:SLEVS:[VR1, SR3] cycles 6
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 622
+  backend add: 41:SLEVS:[VR1, SR3] cycles 5
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 623
+  backend add: 41:SLEVS:[VR1, SR3] cycles 4
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 624
+  backend add: 41:SLEVS:[VR1, SR3] cycles 3
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 625
+  backend add: 41:SLEVS:[VR1, SR3] cycles 2
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 626
+  backend add: 41:SLEVS:[VR1, SR3] cycles 1
+  dispatch vcomp: 42:ADDVS:[VR0, VR0, SR6]
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 627
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 17
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 628
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 16
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 629
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 15
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 630
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 14
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 631
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 13
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 632
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 12
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 633
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 11
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 634
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 10
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 635
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 9
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 636
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 8
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 637
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 7
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 638
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 6
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 639
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 5
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 640
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 4
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 641
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 3
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 642
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 2
+  decode: 44:SLL:[SR6, SR6, SR6]
+===== cycle 643
+  backend add: 42:ADDVS:[VR0, VR0, SR6] cycles 1
+  decode: 44:SLL:[SR6, SR6, SR6]
+  fetch: 45:SLL:[SR1, SR1, SR6]
+===== cycle 644
+  dispatch scalar: 44:SLL:[SR6, SR6, SR6]
+  decode: 45:SLL:[SR1, SR1, SR6]
+===== cycle 645
+  backend scalar: 44:SLL:[SR6, SR6, SR6]
+  decode: 45:SLL:[SR1, SR1, SR6]
+  fetch: 46:SLL:[SR2, SR2, SR6]
+===== cycle 646
+  dispatch scalar: 45:SLL:[SR1, SR1, SR6]
+  decode: 46:SLL:[SR2, SR2, SR6]
+===== cycle 647
+  backend scalar: 45:SLL:[SR1, SR1, SR6]
+  decode: 46:SLL:[SR2, SR2, SR6]
+  fetch: 47:SLL:[SR3, SR3, SR6]
+===== cycle 648
+  dispatch scalar: 46:SLL:[SR2, SR2, SR6]
+  decode: 47:SLL:[SR3, SR3, SR6]
+===== cycle 649
+  backend scalar: 46:SLL:[SR2, SR2, SR6]
+  decode: 47:SLL:[SR3, SR3, SR6]
+  fetch: 48:SV:[VR0, SR1]
+===== cycle 650
+  dispatch scalar: 47:SLL:[SR3, SR3, SR6]
+  decode: 48:SV:[VR0, SR1]
+  fetch: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 651
+  backend scalar: 47:SLL:[SR3, SR3, SR6]
+  dispatch vmem: 48:SV:[VR0, SR1]
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 652
+  backend mem: 48:SV:[VR0, SR1] cycles 14
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 653
+  backend mem: 48:SV:[VR0, SR1] cycles 13
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 654
+  backend mem: 48:SV:[VR0, SR1] cycles 12
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 655
+  backend mem: 48:SV:[VR0, SR1] cycles 11
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 656
+  backend mem: 48:SV:[VR0, SR1] cycles 10
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 657
+  backend mem: 48:SV:[VR0, SR1] cycles 9
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 658
+  backend mem: 48:SV:[VR0, SR1] cycles 8
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 659
+  backend mem: 48:SV:[VR0, SR1] cycles 7
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 660
+  backend mem: 48:SV:[VR0, SR1] cycles 6
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 661
+  backend mem: 48:SV:[VR0, SR1] cycles 5
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 662
+  backend mem: 48:SV:[VR0, SR1] cycles 4
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 663
+  backend mem: 48:SV:[VR0, SR1] cycles 3
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 664
+  backend mem: 48:SV:[VR0, SR1] cycles 2
+  decode: 49:SVWS:[VR0, SR2, SR4]
+===== cycle 665
+  backend mem: 48:SV:[VR0, SR1] cycles 1
+  decode: 49:SVWS:[VR0, SR2, SR4]
+  fetch: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 666
+  dispatch vmem: 49:SVWS:[VR0, SR2, SR4]
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 667
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 26
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 668
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 25
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 669
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 24
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 670
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 23
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 671
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 22
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 672
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 21
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 673
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 20
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 674
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 19
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 675
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 18
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 676
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 17
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 677
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 16
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 678
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 15
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 679
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 14
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 680
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 13
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 681
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 12
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 682
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 11
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 683
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 10
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 684
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 9
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 685
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 8
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 686
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 7
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 687
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 6
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 688
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 5
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 689
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 4
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 690
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 3
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 691
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 2
+  decode: 50:LVWS:[VR2, SR2, SR4]
+===== cycle 692
+  backend mem: 49:SVWS:[VR0, SR2, SR4] cycles 1
+  decode: 50:LVWS:[VR2, SR2, SR4]
+  fetch: 51:SVI:[VR0, SR3, VR1]
+===== cycle 693
+  dispatch vmem: 50:LVWS:[VR2, SR2, SR4]
+  decode: 51:SVI:[VR0, SR3, VR1]
+  fetch: 52:LVI:[VR3, SR3, VR1]
+===== cycle 694
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 26
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 695
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 25
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 696
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 24
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 697
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 23
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 698
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 22
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 699
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 21
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 700
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 20
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 701
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 19
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 702
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 18
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 703
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 17
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 704
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 16
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 705
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 15
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 706
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 14
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 707
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 13
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 708
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 12
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 709
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 11
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 710
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 10
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 711
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 9
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 712
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 8
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 713
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 7
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 714
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 6
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 715
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 5
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 716
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 4
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 717
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 3
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 718
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 2
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 719
+  backend mem: 50:LVWS:[VR2, SR2, SR4] cycles 1
+  dispatch vmem: 51:SVI:[VR0, SR3, VR1]
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 720
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 48
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 721
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 47
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 722
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 46
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 723
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 45
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 724
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 44
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 725
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 43
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 726
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 42
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 727
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 41
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 728
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 40
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 729
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 39
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 730
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 38
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 731
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 37
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 732
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 36
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 733
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 35
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 734
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 34
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 735
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 33
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 736
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 32
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 737
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 31
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 738
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 30
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 739
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 29
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 740
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 28
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 741
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 27
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 742
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 26
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 743
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 25
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 744
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 24
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 745
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 23
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 746
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 22
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 747
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 21
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 748
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 20
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 749
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 19
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 750
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 18
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 751
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 17
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 752
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 16
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 753
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 15
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 754
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 14
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 755
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 13
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 756
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 12
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 757
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 11
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 758
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 10
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 759
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 9
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 760
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 8
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 761
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 7
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 762
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 6
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 763
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 5
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 764
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 4
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 765
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 3
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 766
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 2
+  decode: 52:LVI:[VR3, SR3, VR1]
+===== cycle 767
+  backend mem: 51:SVI:[VR0, SR3, VR1] cycles 1
+  decode: 52:LVI:[VR3, SR3, VR1]
+  fetch: 53:HALT:[]
+===== cycle 768
+  dispatch vmem: 52:LVI:[VR3, SR3, VR1]
+  decode: 53:HALT:[]
+===== cycle 769
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 48
+  dispatch scalar: 53:HALT:[]
+===== cycle 770
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 47
+  backend scalar: 53:HALT:[]
+===== cycle 771
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 46
+===== cycle 772
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 45
+===== cycle 773
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 44
+===== cycle 774
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 43
+===== cycle 775
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 42
+===== cycle 776
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 41
+===== cycle 777
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 40
+===== cycle 778
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 39
+===== cycle 779
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 38
+===== cycle 780
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 37
+===== cycle 781
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 36
+===== cycle 782
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 35
+===== cycle 783
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 34
+===== cycle 784
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 33
+===== cycle 785
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 32
+===== cycle 786
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 31
+===== cycle 787
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 30
+===== cycle 788
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 29
+===== cycle 789
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 28
+===== cycle 790
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 27
+===== cycle 791
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 26
+===== cycle 792
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 25
+===== cycle 793
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 24
+===== cycle 794
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 23
+===== cycle 795
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 22
+===== cycle 796
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 21
+===== cycle 797
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 20
+===== cycle 798
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 19
+===== cycle 799
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 18
+===== cycle 800
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 17
+===== cycle 801
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 16
+===== cycle 802
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 15
+===== cycle 803
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 14
+===== cycle 804
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 13
+===== cycle 805
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 12
+===== cycle 806
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 11
+===== cycle 807
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 10
+===== cycle 808
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 9
+===== cycle 809
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 8
+===== cycle 810
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 7
+===== cycle 811
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 6
+===== cycle 812
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 5
+===== cycle 813
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 4
+===== cycle 814
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 3
+===== cycle 815
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 2
+===== cycle 816
+  backend mem: 52:LVI:[VR3, SR3, VR1] cycles 1

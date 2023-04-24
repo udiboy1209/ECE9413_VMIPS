@@ -14,6 +14,7 @@ if __name__ == "__main__":
         type=str,
         help="Path to the folder containing the input files - instructions and data.",
     )
+    parser.add_argument("--trace", default=False, action='store_true', help="Generate execution trace")
     args = parser.parse_args()
 
     iodir = os.path.abspath(args.iodir)
@@ -27,11 +28,12 @@ if __name__ == "__main__":
     vdmem = DMEM("VDMEM", iodir, 17)  # 512 KB is 2^19 bytes = 2^17 K 32-bit words.
 
     # Create Vector Core
-    vcore = Core(imem, sdmem, vdmem)
+    vcore = Core(imem, sdmem, vdmem, trace=args.trace)
 
     # Run Core
     vcore.run()
     vcore.dumpregs(iodir)
+    vcore.dumptrace(iodir)
 
     sdmem.dump()
     vdmem.dump()
