@@ -12,7 +12,7 @@ LS SR7 SR0 5      #SR7 contains start address for A = 0
 MTCL SR1	  #set vector length to MVL
 ADDVV VR1 VR0 VR0 #set result register VR1 to 0
 #start loop to multiply elements
-BGT SR6 SR1 +3	  #if vector elements remaining < MVL, change vector length
+BGE SR6 SR1 +3	  #if vector elements remaining < MVL, change vector length
 SUB SR2 SR1 SR6
 MTCL SR2
 LV VR2 SR7        #load starting elements of A
@@ -49,7 +49,7 @@ LS SR6 SR0 2      #SR6 contains length of output vector = 256
 LS SR3 SR0 6      #SR3 contains start address of B = 256
 MTCL SR1	  #set vector length to MVL
 #start loop to add elements
-BGT SR6 SR1 +3	  #if vector elements remaining < MVL, change vector length
+BGE SR6 SR1 +3	  #if vector elements remaining < MVL, change vector length
 SUB SR2 SR1 SR6
 MTCL SR2
 LV VR2 SR7        #load starting elements of R
