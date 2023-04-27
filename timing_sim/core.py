@@ -59,6 +59,17 @@ class Core:
         self.mem_ins = None
         self.mem_free = True
         self.mem_cycles_left = 0
+        # Load-store pipeline
+        banks = self.config.vdmNumBanks
+        bankwait = self.config.vdmBankWait
+        lanes = self.config.numLanes
+
+        self.addr_queues = None
+        self.lane_pipes = [[None for _ in range(self.config.vlsPipelineDepth)] for _ in range(lanes)]
+        self.bank_busyboard = [True for _ in range(banks)]
+        self.addrs_remaining = 0
+
+        # Backend compute
         self.mul_ins = None
         self.mul_free = True
         self.mul_cycles_left = 0
@@ -173,20 +184,6 @@ class Core:
                 self.decode_free = True
                 self.mark_busyboard(ins)
 
-    def get_mem_cycles(self, ins):
-        banks = self.config.vdmNumBanks
-        pdepth = self.config.vlsPipelineDepth
-        if ins.value is None:
-            raise Exception(f"Memory instruction {ins} does not have addresses")
-        if type(ins.value) is not list:
-            addrs = [ins.value]
-        else:
-            addrs = ins.value
-        perbank = [0 for _ in range(banks)]
-        for addr in addrs:
-            perbank[addr % banks] += 1
-        maxperbank = max(perbank)
-        return pdepth - 1 + maxperbank
 
     def dispatch_vec_data(self):
         if len(self.vec_data_q) == 0:
@@ -196,8 +193,18 @@ class Core:
         if self.mem_free:
             self.mem_ins = vmem_ins
             self.mem_free = False
-            self.mem_cycles_left = self.get_mem_cycles(vmem_ins)
             self.vec_data_q.popleft()
+
+            if vmem_ins.value is None:
+                raise Exception(f"Memory instruction {vmem_ins} does not have addresses")
+            if type(vmem_ins.value) is not list:
+                addrs = [vmem_ins.value]
+            else:
+                addrs = vmem_ins.value
+
+            lanes = self.config.numLanes
+            self.addr_queues = [deque(addrs[i::lanes]) for i in range(lanes)]
+            self.addrs_remaining = len(addrs)
 
     def get_compute_cycles(self, ins):
         lanes = self.config.numLanes
@@ -247,15 +254,63 @@ class Core:
                 self.dispatch_scalar_ins = None
                 self.dispatch_scalar_free = True
 
+    def backend_mem(self):
+        if self.addrs_remaining == 0:
+            return 
+
+        banks = self.config.vdmNumBanks
+        bankwait = self.config.vdmBankWait
+        pdepth = self.config.vlsPipelineDepth
+        lanes = self.config.numLanes
+
+        def get_bank(addr):
+            return addr % banks
+
+        addr_queues = self.addr_queues
+        lane_pipes = self.lane_pipes
+        bank_busyboard = self.bank_busyboard
+
+        # Simulate the load-store pipeline
+            # Advance lane pipelines
+        for i in range(lanes):
+            # Bank access wait is over, free the busyboard 
+            if lane_pipes[i][bankwait + 1] is not None:
+                bank_busyboard[get_bank(lane_pipes[i][bankwait + 1])] = True
+
+            # Addr processed
+            if lane_pipes[i][-1] is not None:
+                self.addrs_remaining -= 1
+
+            for j in range(pdepth-2):
+                lane_pipes[i][pdepth-1-j] = lane_pipes[i][pdepth-2-j]
+            # 0th can advance only if not stalled
+            addr = lane_pipes[i][0]
+            if addr is not None and bank_busyboard[get_bank(addr)]:
+                lane_pipes[i][1] = addr
+                lane_pipes[i][0] = None
+                bank_busyboard[get_bank(addr)] = False
+            else:
+                # Insert stall
+                lane_pipes[i][1] = None
+            # Push new addrs
+            if lane_pipes[i][0] is None and len(addr_queues[i]) > 0:
+                lane_pipes[i][0] = addr_queues[i].popleft()
+
+            self.logcycle("    backend mem queue:", lane_pipes[i])
+        # perbank = [0 for _ in range(banks)]
+        # for addr in addrs:
+        #     perbank[addr % banks] += 1
+        # maxperbank = max(perbank)
+        # return pdepth - 1 + maxperbank
+
     def backend_stage(self):
         if not self.mem_free:
-            self.logcycle("  backend mem:", self.mem_ins, "cycles", self.mem_cycles_left)
-            if self.mem_cycles_left == 1:
+            self.logcycle("  backend mem:", self.mem_ins)
+            self.backend_mem()
+            if self.addrs_remaining == 0:
                 self.unmark_busyboard(self.mem_ins)
                 self.mem_ins = None
                 self.mem_free = True
-            else:
-                self.mem_cycles_left -= 1
 
         if not self.mul_free:
             self.logcycle("  backend mul:", self.mul_ins, "cycles", self.mul_cycles_left)
