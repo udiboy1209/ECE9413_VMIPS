@@ -42,12 +42,13 @@ ADD SR5 SR5 SR2	  #increment to next address location
 ###END DOT PRODUCT
 SUB SR4 SR4 SR2   #update count of W matrix columns
 BGT SR4 SR0 -29   #stay in loop if columns remain
+MTCL SR1	  #set vector length to MVL
+SV VR0 SR5	  #clear random memory contents
 ##END MATRIX MUL
 #start loop to add bias
 LS SR7 SR0 3      #SR7 contains start address to fetch/store result (R) = 66048
 LS SR6 SR0 2      #SR6 contains length of output vector = 256
 LS SR3 SR0 6      #SR3 contains start address of B = 256
-MTCL SR1	  #set vector length to MVL
 #start loop to add elements
 BGE SR6 SR1 +3	  #if vector elements remaining < MVL, change vector length
 SUB SR2 SR1 SR6
