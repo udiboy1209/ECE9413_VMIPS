@@ -11,6 +11,7 @@ VEC_OPS = VEC_DATA_OPS | VEC_COMPUTE_OPS
 VMR_SCALAR_OPS = {"CVM", "POP"}
 VLR_SCALAR_OPS = {"MTCL", "MFCL"}
 SCALAR_DST_OPS = {"ADD", "SUB", "AND", "OR", "XOR", "LS", "SLL", "SRL", "SRA", "MFCL", "POP"}
+BRANCH_OPS = {"BGT", "BGE", "BLE", "BLT", "BEQ", "BNE"}
 
 class Config(dict):
     def __init__(self, iodir):
@@ -182,8 +183,9 @@ class Core:
 
         ins = self.decode_ins
         self.logcycle("  decode:", ins)
-        if not self.check_busyboard(ins):
+        if ins.opcode not in BRANCH_OPS and not self.check_busyboard(ins):
             # Wait for instruction ops to be free
+            # Do not check for branch as they are already resolved
             return
 
         if ins.opcode in VEC_DATA_OPS:
