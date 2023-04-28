@@ -6,6 +6,11 @@ from itrace import Reg
 
 VEC_DATA_OPS = {"LV", "LVWS", "LVI", "SV", "SVWS", "SVI"}
 VEC_COMPUTE_OPS = {"ADDVS", "SUBVS", "MULVS", "DIVVS", "ADDVV", "SUBVV", "MULVV", "DIVVV", "SEQVV", "SNEVV", "SGTVV", "SLTVV", "SGEVV", "SLEVV", "SEQVS", "SNEVS", "SGTVS", "SLTVS", "SGEVS", "SLEVS"}
+VEC_MASK_OPS = {"SEQVV", "SNEVV", "SGTVV", "SLTVV", "SGEVV", "SLEVV", "SEQVS", "SNEVS", "SGTVS", "SLTVS", "SGEVS", "SLEVS"}
+VEC_OPS = VEC_DATA_OPS | VEC_COMPUTE_OPS
+VMR_SCALAR_OPS = {"CVM", "POP"}
+VLR_SCALAR_OPS = {"MTCL", "MFCL"}
+SCALAR_DST_OPS = {"ADD", "SUB", "AND", "OR", "XOR", "LS", "SLL", "SRL", "SRA", "MFCL", "POP"}
 
 class Config(dict):
     def __init__(self, iodir):
@@ -42,7 +47,8 @@ class Core:
         self.halted = False
 
         # Decode BusyBoard, True means free, False means busy
-        self.srf_busyboard = [True for _ in range(8)]
+        # 8 registers + VMR, VLR for SRF
+        self.srf_busyboard = [True for _ in range(10)]
         self.vrf_busyboard = [True for _ in range(8)]
 
         # Fetch to Decode 
@@ -126,6 +132,11 @@ class Core:
                 continue
             free = free and (((op.ty == Reg.SCALAR) and self.srf_busyboard[op.idx])
                     or ((op.ty == Reg.VECTOR) and self.vrf_busyboard[op.idx]))
+
+        if ins.opcode in VMR_SCALAR_OPS or ins.opcode in VEC_OPS:
+            free = free and self.srf_busyboard[8]
+        if ins.opcode in VLR_SCALAR_OPS or ins.opcode in VEC_OPS:
+            free = free and self.srf_busyboard[9]
         return free
 
     def mark_busyboard(self, ins):
@@ -133,20 +144,36 @@ class Core:
         for op in ins.ops:
             if type(op) is not Reg:
                 continue
-            if op.ty == Reg.SCALAR:
-                self.srf_busyboard[op.idx] = False
-            elif op.ty == Reg.VECTOR:
+            if op.ty == Reg.VECTOR:
                 self.vrf_busyboard[op.idx] = False
+            # Scalar reg checked below only for destination
+        if ins.opcode == 'CVM' or ins.opcode in VEC_MASK_OPS:
+            # Writes to VMR
+            self.srf_busyboard[8] = False
+        if ins.opcode == 'MTCL':
+            # Writes to VLR
+            self.srf_busyboard[9] = False
+        if ins.opcode in SCALAR_DST_OPS:
+            # Only destination scalar regs are marked busy.
+            # Source regs are passed along with the ins at decode
+            # so no need to mark busy.
+            self.srf_busyboard[ins.op(0).idx] = False
 
     def unmark_busyboard(self, ins):
         # Mark instruction operands as free
         for op in ins.ops:
             if type(op) is not Reg:
                 continue
-            if op.ty == Reg.SCALAR:
-                self.srf_busyboard[op.idx] = True
-            elif op.ty == Reg.VECTOR:
+            if op.ty == Reg.VECTOR:
                 self.vrf_busyboard[op.idx] = True
+        if ins.opcode == 'CVM' or ins.opcode in VEC_MASK_OPS:
+            # VMR
+            self.srf_busyboard[8] = True
+        if ins.opcode == 'MTCL':
+            # VLR
+            self.srf_busyboard[9] = True
+        if ins.opcode in SCALAR_DST_OPS:
+            self.srf_busyboard[ins.op(0).idx] = True
 
 
     def decode_stage(self):

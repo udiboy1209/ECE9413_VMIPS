@@ -76,21 +76,6 @@ class Instruction(object):
         # Return the operand `idx`
         return self.ops[idx]
 
-    def dst(self):
-        # Return the destination operand i.e. ops[0]
-        # WARN: not always correct, use op()
-        return self.ops[0]
-
-    def src(self, idx):
-        # Return the source operand `idx` i.e. ops[idx + 1]
-        # WARN: not always correct, use op()
-        return self.ops[idx + 1]
-
-    def imm(self):
-        # Return the immediate operand i.e. ops[2]
-        # WARN: not always correct, use op()
-        return self.ops[2]
-
     def __repr__(self):
         if self.idx >= 0:
             return f"{self.idx}:{self.opcode}:{self.ops}"
