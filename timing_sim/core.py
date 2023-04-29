@@ -38,9 +38,15 @@ class Config(dict):
 class Core:
     MVL = 64  # Max vector length
 
-    def __init__(self, itrace, config):
+    def __init__(self, itrace, config, iodir, cyclewise=False):
         self.ITrace = itrace
         self.config = config
+        if cyclewise:
+            self.cyclewise = open(os.path.join(iodir, "cyclewise.log"), "w")
+        else:
+            self.cyclewise = None
+
+
 
         # Dynamic ins counter
         self.count = 0
@@ -90,7 +96,8 @@ class Core:
         self.scalar_free = True
 
     def logcycle(self, *args):
-        print(*args)
+        if self.cyclewise:
+            print(*args, file=self.cyclewise)
 
     def run(self):
         stop = False
@@ -98,9 +105,11 @@ class Core:
             self.logcycle("===== cycle", self.cycle)
             self.backend_stage()
 
-            self.dispatch_vec_data()
-            self.dispatch_vec_compute()
-            self.dispatch_scalar()
+            # Try all three but only do one per cycle
+            # Arbitration priority is fixed, first data, then compute, then scalar
+            if not self.dispatch_vec_data():
+                if not self.dispatch_vec_compute():
+                    self.dispatch_scalar()
 
             self.decode_stage()
 
@@ -114,6 +123,11 @@ class Core:
                     and self.scalar_free and self.mem_free and self.dispatch_scalar_free \
                     and (len(self.vec_data_q) == 0) and (len(self.vec_compute_q) == 0) \
                     and self.decode_free
+
+        if self.cyclewise:
+            self.cyclewise.close()
+
+        return self.cycle
 
     def fetch_stage(self):
         if self.decode_free and not self.halted:
@@ -197,7 +211,7 @@ class Core:
                 self.decode_free = True
                 self.mark_busyboard(ins)
         elif ins.opcode in VEC_COMPUTE_OPS:
-            if len(self.vec_data_q) < self.config.computeQueueDepth:
+            if len(self.vec_compute_q) < self.config.computeQueueDepth:
                 # Pass on instruction to dispatch
                 self.vec_compute_q.append(self.decode_ins)
                 # Free input of decode
@@ -216,7 +230,7 @@ class Core:
 
     def dispatch_vec_data(self):
         if len(self.vec_data_q) == 0:
-            return
+            return False
         vmem_ins = self.vec_data_q[0]
         self.logcycle("  dispatch vmem:", vmem_ins)
         if self.mem_free:
@@ -234,6 +248,12 @@ class Core:
             lanes = self.config.numLanes
             self.addr_queues = [deque(addrs[i::lanes]) for i in range(lanes)]
             self.addrs_remaining = len(addrs)
+            for i in range(lanes):
+                if len(self.addr_queues[i]) > 0:
+                    self.lane_pipes[i][0] = self.addr_queues[i].popleft()
+
+            return True
+        return False
 
     def get_compute_cycles(self, ins):
         lanes = self.config.numLanes
@@ -252,7 +272,7 @@ class Core:
         pAdd = self.config.pipelineDepthAdd
 
         if len(self.vec_compute_q) == 0:
-            return
+            return False
         vcomp_ins = self.vec_compute_q[0]
         self.logcycle("  dispatch vcomp:", vcomp_ins)
         if vcomp_ins.opcode.startswith("MUL"):
@@ -261,18 +281,22 @@ class Core:
                 self.mul_free = False
                 self.mul_cycles_left = self.get_compute_cycles(vcomp_ins)
                 self.vec_compute_q.popleft()
+                return True
         elif vcomp_ins.opcode.startswith("DIV"):
             if self.div_free:
                 self.div_ins = vcomp_ins
                 self.div_free = False
                 self.div_cycles_left = self.get_compute_cycles(vcomp_ins)
                 self.vec_compute_q.popleft()
+                return True
         else:
             if self.add_free:
                 self.add_ins = vcomp_ins
                 self.add_free = False
                 self.add_cycles_left = self.get_compute_cycles(vcomp_ins)
                 self.vec_compute_q.popleft()
+                return True
+        return False
 
     def dispatch_scalar(self):
         if not self.dispatch_scalar_free:
@@ -282,6 +306,8 @@ class Core:
                 self.scalar_free = False
                 self.dispatch_scalar_ins = None
                 self.dispatch_scalar_free = True
+                return True
+        return False
 
     def backend_mem(self):
         if self.addrs_remaining == 0:
@@ -302,9 +328,10 @@ class Core:
         # Simulate the load-store pipeline
             # Advance lane pipelines
         for i in range(lanes):
+            self.logcycle("    backend mem queue:", lane_pipes[i])
             # Bank access wait is over, free the busyboard 
-            if lane_pipes[i][bankwait + 1] is not None:
-                bank_busyboard[get_bank(lane_pipes[i][bankwait + 1])] = True
+            if lane_pipes[i][bankwait] is not None:
+                bank_busyboard[get_bank(lane_pipes[i][bankwait])] = True
 
             # Addr processed
             if lane_pipes[i][-1] is not None:
@@ -324,13 +351,6 @@ class Core:
             # Push new addrs
             if lane_pipes[i][0] is None and len(addr_queues[i]) > 0:
                 lane_pipes[i][0] = addr_queues[i].popleft()
-
-            self.logcycle("    backend mem queue:", lane_pipes[i])
-        # perbank = [0 for _ in range(banks)]
-        # for addr in addrs:
-        #     perbank[addr % banks] += 1
-        # maxperbank = max(perbank)
-        # return pdepth - 1 + maxperbank
 
     def backend_stage(self):
         if not self.mem_free:

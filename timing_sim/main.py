@@ -13,6 +13,7 @@ if __name__ == "__main__":
         type=str,
         help="Path to the folder containing the input files - instructions and data.",
     )
+    parser.add_argument("--cyclewise", default=False, action="store_true", help="Generate cycle-wise pipeline log")
     args = parser.parse_args()
 
     iodir = os.path.abspath(args.iodir)
@@ -23,9 +24,10 @@ if __name__ == "__main__":
     # Parse trace
     itrace = ITrace(iodir)
     # Create Vector Core
-    vcore = Core(itrace, config)
+    vcore = Core(itrace, config, iodir, cyclewise=args.cyclewise)
 
     # Run Core
-    vcore.run()
+    cycles_taken = vcore.run()
+    print("Cycles:", cycles_taken)
 
     # THE END
