@@ -67,3 +67,6 @@ Following tests are added:
 
 The provided `isa` test is kept here, but runs into an infinite loop hence
 does not generate outputs.
+
+The `tests/mat_mul_256x256/Code_optimized.asm` contains the code with hoisted loads,
+as described in Appendix A of the report.
