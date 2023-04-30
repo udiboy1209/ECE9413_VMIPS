@@ -35,7 +35,7 @@ It can also dump the cycle-wise pipeline state, for debugging and examining the 
 
 ### How to run
 
-The functional simulator is located in `timing_sim` folder.
+The timing simulator is located in `timing_sim` folder.
 The script must be executed from the **SAME FOLDER** for python to correctly find
 all required files.
 Ensure that the functional simulator is run beforehand with the `--trace` flag
